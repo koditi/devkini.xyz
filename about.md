@@ -4,12 +4,6 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+We are a group of software developers in Malaysia. Most of the time, we do discussion in a Telegram group.
 
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+Feel free to join our [Telegram group](https://telegram.me/joinchat/ACIF0AHECE3dGeOPeqM8zw).
