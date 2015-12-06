@@ -189,4 +189,30 @@ Views basically a template that contain the actual response we want to return to
 @stop
 ```
 
+## Helpers
+
+Coming from Django, one thing that I'd immediately looked into is the ability to generate url from the defined routing. In Django it's called reverse url routing. In Laravel, this exists in the form of helpers function called `route()`. You can pass the routing name to the function and it will return the corresponding url. For example:-
+
+```
+route('customer.index') // will return /customer/
+```
+
+For resource controller, the name is automatically generated and you can refer the [documentation][2] on the available name. In the Views template, you can call the function like this:-
+
+```html
+@extends('app')
+
+@section('content')
+    <div class="container">
+        <div class="content">
+            <div class="title">Customers</div>
+            <form action="{{ route('customer.store') }}" method="post">
+                <input type="text" name="name" />
+            </form>
+        </div>
+    </div>
+@stop
+```
+
 [1]:https://github.com/zulfajuniadi/laravel-base
+[2]:http://laravel.com/docs/5.1/controllers#restful-resource-controllers
