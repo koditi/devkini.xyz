@@ -199,6 +199,7 @@ route('customer.index') // will return /customer/
 
 For resource controller, the name is automatically generated and you can refer the [documentation][2] on the available name. In the Views template, you can call the function like this:-
 
+{% raw %}
 ```html
 @extends('app')
 
@@ -212,6 +213,7 @@ For resource controller, the name is automatically generated and you can refer t
         </div>
     </div>
 @stop
+{% endraw %}
 ```
 
 [1]:https://github.com/zulfajuniadi/laravel-base
