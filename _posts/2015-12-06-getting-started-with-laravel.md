@@ -122,4 +122,71 @@ Route::controller('password', 'Auth\PasswordController');
 
 Notice that they're using `Route::controller` instead. Turn out there are 2 types of controller in Laravel - RESTFull resource controller and Implicit controller. The one generated with the `artisan` command basically a resource controller so that's why you should attach it to the route with `Route::resource()` and not `Route::controller()`.
 
+## Views
+
+The controller should return an output (or HTTP speak, a response) to user. At the very basic, we can just return a plain string:-
+
+```php
+<?php
+class CustomerController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        return 'Hello world !';
+    }
+```
+
+But as the comment in above method mention, the method supposed to return a `Response` object. If we return a plain string, Laravel will wrap it into a `Response` object but we can also explicitly return a `Response` object:-
+
+```php
+<?php
+class CustomerController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        return new Response('Hello world !', 200);
+    }
+```
+
+The second argument to `Response()` which is a HTTP status code to return is optional but that's the advantage of returning a `Response` object, as it allow us to return custom status code instead of the default `200 OK`. However most of the time what we would return from controller is a `Views` instead:-
+
+```php
+<?php
+class CustomerController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        return view('customers/list');
+    }
+```
+
+Views basically a template that contain the actual response we want to return to user. As in above code, Laravel will look for file called `resources/views/customers/list.blade.php`. Blade is the default templating language used by Laravel. The file `list.blade.php` is just like the regular HTML file but with some special syntax:-
+
+```html
+@extends('app')
+
+@section('content')
+    <div class="container">
+        <div class="content">
+            <div class="title">Customers</div>
+        </div>
+    </div>
+@stop
+```
+
 [1]:https://github.com/zulfajuniadi/laravel-base
