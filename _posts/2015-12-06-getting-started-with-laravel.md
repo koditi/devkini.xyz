@@ -216,5 +216,7 @@ For resource controller, the name is automatically generated and you can refer t
 {% endraw %}
 ```
 
+That's all for now. Hopefully I can show more in-depth example as I progress forward in learning Laravel.
+
 [1]:https://github.com/zulfajuniadi/laravel-base
 [2]:http://laravel.com/docs/5.1/controllers#restful-resource-controllers
