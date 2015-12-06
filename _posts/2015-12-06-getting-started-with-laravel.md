@@ -6,6 +6,7 @@ author: kamal
 
 I'm using the [`laravel-base`][1] as starting point. For starter, the [`laravel-base`][1]'s `Readme.md` already covering it well.
 
+## Database Tables
 Since I want to store some data in the db, the first thing to do is to create the table's schema. You accomplish this using the `artisan` command:-
 
 ```
@@ -55,5 +56,21 @@ The column `id` and `timestamps` were added by default but you have to add other
 ```
 php artisan migrate
 ```
+
+## Model
+
+To interact with the database, Laravel use an ORM named Eloquent. To create the model, we can ru the command:-
+
+```
+php artisan make:model Customer
+```
+
+This will create a file named `Customer.php` in the `app/` folder. I wish the `artisan` command show the exact path where the files being generated instead of just showing:-
+
+```
+Model created successfully.
+```
+
+## Controller
 
 [1]:https://github.com/zulfajuniadi/laravel-base
