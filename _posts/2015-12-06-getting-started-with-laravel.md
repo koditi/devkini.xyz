@@ -50,4 +50,10 @@ class CreateCustomersTable extends Migration
 }
 ```
 
+The column `id` and `timestamps` were added by default but you have to add other column manually. Once you have filled up the file with all the column you want, you can run the `migrate` command to let laravel create the corresponding database table:-
+
+```
+php artisan migrate
+```
+
 [1]:https://github.com/zulfajuniadi/laravel-base
