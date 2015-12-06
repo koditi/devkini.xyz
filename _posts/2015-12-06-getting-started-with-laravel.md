@@ -107,7 +107,7 @@ Having a controller alone is not enough as Laravel still don't know about the co
 Route::resource('customer', 'CustomerController');
 ```
 
-This is where I got stucked initially, as the existing routes defined in `laravel-base` look like this:-
+With above route definition, if you try to access url such as http://localhost:8000/customer, Laravel will execute the `index()` method in `CustomerController` class. This is where I got stucked initially, as the existing routes defined in `laravel-base` look like this:-
 
 ```php
 <?php
