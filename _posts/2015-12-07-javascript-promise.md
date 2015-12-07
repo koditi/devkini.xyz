@@ -36,3 +36,7 @@ The first code is a common mistake to someone new in async programming because w
 > But promises like a callback? that `then()` is a callback of `db.connect`, but why promises is not a callback? What's the difference ?
 
 Ok, let rephrase it. Promise is a different (or maybe better) way of using callback. So doesn't mean that when you use promise, you're not using callback anymore. You can't remove callback since it's the core of the language, that's how javascript work. But you can use it in different way.
+
+For more in-depth write up on promise, I'd suggest to read [this article][1] (a very long one, /me haven't finished it yet ;))
+
+[1]:http://robotlolita.me/2015/11/15/how-do-promises-work.html
