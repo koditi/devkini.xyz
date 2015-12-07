@@ -6,6 +6,8 @@ author: kamal
 
 I'm using the [`laravel-base`][1] as starting point. For starter, the [`laravel-base`][1]'s `Readme.md` already covering it well.
 
+<!--more-->
+
 ## Database Tables
 Since I want to store some data in the db, the first thing to do is to create the table's schema. You accomplish this using the `artisan` command:-
 
