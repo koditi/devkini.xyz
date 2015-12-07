@@ -11,6 +11,8 @@ This is an answer to a question in FB group:-
 
 Promise let you program in async while maintaining the synchronize structure of your code. Take this code:-
 
+<!--more-->
+
 ```javascript
 var res;
 db_connect(host, function(conn) {
