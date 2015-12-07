@@ -1,6 +1,6 @@
 ---
 layout: post
-title: GIT: Finding Parent Branch
+title: "GIT: Finding Parent Branch"
 author: kamal
 tags: git, tips
 ---
