@@ -27,8 +27,10 @@ Using promise:-
 var res;
 db.connect(host).then(function(conn) {
   res = conn.query("select * from ...");
+  return res;
+}).then(function(res){
+  console.log(res); // already available
 });
-console.log(res); // already available
 ```
 
 The first code is a common mistake to someone new in async programming because while the code is async, the structure is not, you assume it to run from top to bottom. Using promise, the program definitely run from top to bottom as you read it.
