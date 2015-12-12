@@ -21,5 +21,5 @@ Note: **everyone** (with large data in production) uses protobuf for on-the-wire
 
 Note: I do NOT recommend protobuf for new projects. Premature optimization. Stick with json, then switch when you have hit CPU/bandwidth bottlenecks (yeah, those are serialization stuff, we still use them over https anyway. mix and match) [Read all about them here](https://en.wikipedia.org/wiki/Comparison_of_data_serializatio) so you'll be able to impress other folks: :) 
 
-Another smartsounding useless factoid: zfs, nfs, libvirt, firebird db uses XDR... Financial services ("millions of messages per second") like(?)/standardized(?)/use(?) SBE http://real-logic.github.io/simple-binary-encoding/ 
+Another smartsounding useless factoid: zfs, nfs, libvirt, firebird db uses XDR... Financial services ("millions of messages per second") like(?)/standardized(?)/use(?) [SBE](http://real-logic.github.io/simple-binary-encoding/)  
 [dota2 (and steam)](https://github.com/SteamRE/SteamKit/tree/master/Resources/Protobufs/dota).
