@@ -25,3 +25,5 @@ Note: I do NOT recommend protobuf for new projects. Premature optimization. Stic
 
 Another smartsounding useless factoid: zfs, nfs, libvirt, firebird db uses XDR... Financial services ("millions of messages per second") like(?)/standardized(?)/use(?) [SBE](http://real-logic.github.io/simple-binary-encoding/)  
 [dota2 (and steam)](https://github.com/SteamRE/SteamKit/tree/master/Resources/Protobufs/dota).
+
+Other reading - [https://aaronparecki.com/articles/2015/01/22/1/why-not-json].
