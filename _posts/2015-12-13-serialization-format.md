@@ -7,8 +7,6 @@ tags: json
 
 This is an excerpt from a discussion in [#devkini][1] Telegram group, so if you have something more to say on this topic, heads up to the [group][1] to share your thought.
 
-[1]:https://telegram.me/joinchat/ACIF0AHECE3dGeOPeqM8zw
-
 JSON is a *de-facto* format to use when transferring structured data over the network. But what if you need more than JSON can offer, such as faster serialization/de-serialization, efficient bandwidth usage or backward compatible data schema ? Let's look at some of the alternatives:-
 
 <!--more-->
@@ -26,4 +24,7 @@ Note: I do NOT recommend protobuf for new projects. Premature optimization. Stic
 Another smartsounding useless factoid: zfs, nfs, libvirt, firebird db uses XDR... Financial services ("millions of messages per second") like(?)/standardized(?)/use(?) [SBE](http://real-logic.github.io/simple-binary-encoding/)  
 [dota2 (and steam)](https://github.com/SteamRE/SteamKit/tree/master/Resources/Protobufs/dota).
 
-Other reading - [https://aaronparecki.com/articles/2015/01/22/1/why-not-json].
+Other reading - [https://aaronparecki.com/articles/2015/01/22/1/why-not-json][2].
+
+[1]:https://telegram.me/joinchat/ACIF0AHECE3dGeOPeqM8zw
+[2]:https://aaronparecki.com/articles/2015/01/22/1/why-not-json
