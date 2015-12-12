@@ -5,6 +5,8 @@ author: kamal
 tags: javascript
 ---
 
+Update 1: Thanks to [fadzlan](https://github.com/fadzlan) for [fixing](https://github.com/devkini/devkini.github.io/pull/1) the second example.
+
 This is an answer to a question in FB group:-
 
 >Confuse with callback and promises. In $.ajax, the success callback is async by default, why do we need to use promise? Can someone good in JS explain?
