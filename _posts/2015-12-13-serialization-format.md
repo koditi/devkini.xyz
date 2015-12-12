@@ -11,6 +11,8 @@ This is an excerpt from a discussion in [#devkini][1] Telegram group, so if you 
 
 JSON is a *de-facto* format to use when transferring structured data over the network. But what if you need more than JSON can offer, such as faster serialization/de-serialization, efficient bandwidth usage or backward compatible data schema ? Let's look at some of the alternatives:-
 
+<!-- More -->
+
 ## msgpack
 From the website - MessagePack is an efficient binary serialization format. It lets you exchange data among multiple languages like JSON. But it's faster and smaller. Small integers are encoded into a single byte, and typical short strings require only one extra byte in addition to the strings themselves.
 
