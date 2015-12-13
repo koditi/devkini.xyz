@@ -19,7 +19,7 @@ From the website - MessagePack is an efficient binary serialization format. It l
 
 Note: **everyone** (with large data in production) uses protobuf for on-the-wire data (v2 though, v3 take up is a lot less). [Diablo3's network protocol](https://github.com/fry/d3) , google's gtfs-realtime, etcd. Compares very similar to facebook's apache thrift. Twitter [shoehorned protobuf into Hadoop](http://www.slideshare.net/kevinweil/protocol-buffers-and-hadoop-at-twitter/26-Enter_Protocol_Buffers_Protocol_Buffers).
 
-Note: I do NOT recommend protobuf for new projects. Premature optimization. Stick with json, then switch when you have hit CPU/bandwidth bottlenecks (yeah, those are serialization stuff, we still use them over https anyway. mix and match) [Read all about them here](https://en.wikipedia.org/wiki/Comparison_of_data_serializatio) so you'll be able to impress other folks: :) 
+Note: I do NOT recommend protobuf for new projects. Premature optimization. Stick with json, then switch when you have hit CPU/bandwidth bottlenecks (yeah, those are serialization stuff, we still use them over https anyway. mix and match) [Read all about them here](https://en.wikipedia.org/wiki/Comparison_of_data_serialization_formats) so you'll be able to impress other folks: :) 
 
 Another smartsounding useless factoid: zfs, nfs, libvirt, firebird db uses XDR... Financial services ("millions of messages per second") like(?)/standardized(?)/use(?) [SBE](http://real-logic.github.io/simple-binary-encoding/)  
 [dota2 (and steam)](https://github.com/SteamRE/SteamKit/tree/master/Resources/Protobufs/dota).
