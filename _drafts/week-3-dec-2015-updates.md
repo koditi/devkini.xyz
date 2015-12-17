@@ -16,6 +16,8 @@ Hello, this is the first series of updates on software development that we hope 
   - [Facebook released AI hardware design](http://arstechnica.com/information-technology/2015/12/facebooks-open-sourcing-of-ai-hardware-is-the-start-of-the-deep-learning-revolution/).
   - [Google released open source AI software](http://www.wired.com/2015/11/google-open-sources-its-artificial-intelligence-engine/).
   - [Introducing OpenAI](https://openai.com/blog/introducing-openai/).
+9. Let's Encrypt, a project to provide an easy to use free SSL certificate for everyone, [now opened to public in limited beta](http://blog.apnic.net/2015/12/16/now-everybody-can-https/)
+10. AMD announced [GPUOpen - Open Source Tools, Graphics Effects, Libraries And SDKs](http://wccftech.com/amds-answer-to-nvidias-gameworks-gpuopen-announced-open-source-tools-graphics-effects-and-libraries/) for GPU based development.
 
 ## Products/Services
 
@@ -25,3 +27,5 @@ Here some interesting products or services we found this week:-
 2. An easy way to build website - http://kedaiweb.site/.
 3. Another easy way to build website but this is a bit different, it build your website from your Facebook Page. Quite cool and practical idea I think - http://instaweb.my/.
 4. Webfaction (disclosure: my favourite shared hosting) has added [support for PHP7](https://blog.webfaction.com/2015/12/php-7-is-here/) in it's hosting package.
+
+That's all for now. Until we meet again next week. Meanwhile, why not hop to our [Telegram Group](https://telegram.me/joinchat/ACIF0AHECE3dGeOPeqM8zw) for discussion ?
