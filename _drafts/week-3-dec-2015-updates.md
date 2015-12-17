@@ -10,6 +10,12 @@ Hello, this is the first series of updates on software development that we hope 
 3. Django Project [received a massive grant](https://www.djangoproject.com/weblog/2015/dec/11/django-awarded-moss-grant/) from Mozilla Open Source Support (MOSS) program - $150K that it will be used to fund development of, among other things HTTP2, background tasks and websocket support.
 4. [Angular 2](https://angular.io/) Beta [released](http://angularjs.blogspot.my/2015/12/angular-2-beta.html). Now maybe a good time to start looking into the framework if you're still on Angular 1.
 5. This is more than a week old but we listed here for it's significance. A [new Android emulator from Android Studio 2.0 Preview](http://android-developers.blogspot.my/2015/12/android-studio-20-preview-android.html) ! We all know how slow the Android emulator is and this one claimed to fix that.
+6. ReactOS, an OS project that try to build an open source Windows fully compatible OS from scratch finally [reach an RC (Release Candidate)](http://finance.yahoo.com/news/reactos-open-source-windows-clone-173145859.html) stage. If you're old enough to be on the Internet, you'll realized that this project was started 17 years ago !
+7. [Rust 1.5 released](http://blog.rust-lang.org/2015/12/10/Rust-1.5.html). Rust is a system programming language aimed to offer better alternative than C/C++ for writing system program.
+8. A number of updates on the AI (Artificial Intelligence) space:-
+  - [Facebook released AI hardware design](http://arstechnica.com/information-technology/2015/12/facebooks-open-sourcing-of-ai-hardware-is-the-start-of-the-deep-learning-revolution/).
+  - [Google released open source AI software](http://www.wired.com/2015/11/google-open-sources-its-artificial-intelligence-engine/).
+  - [Introducing OpenAI](https://openai.com/blog/introducing-openai/).
 
 ## Products/Services
 
