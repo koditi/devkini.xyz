@@ -14,3 +14,4 @@ Hello, this is the first series of updates on software development that we hope 
 Here some interesting products or services we found this week:-
 
 1. List of VPS providers in Japan - https://romanrm.net/vps/japan.
+2. An easy way to build website - http://kedaiweb.site/.
