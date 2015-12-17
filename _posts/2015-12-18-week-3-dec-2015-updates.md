@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Week 3 Dec 20015 Updates
+title: Week 3 Dec 2015 Updates
 ---
 
 Hello, this is the first series of updates on software development that we hope to do on weekly basis.
@@ -23,7 +23,7 @@ Hello, this is the first series of updates on software development that we hope 
 
 Here some interesting products or services we found this week:-
 
-1. List of VPS providers in Japan - (https://romanrm.net/vps/japan).
+1. List of VPS providers in Japan - https://romanrm.net/vps/japan.
 2. An easy way to build website - http://kedaiweb.site/.
 3. Another easy way to build website but this is a bit different, it build your website from your Facebook Page. Quite cool and practical idea I think - http://instaweb.my/.
 4. Webfaction (disclosure: my favourite shared hosting) has added [support for PHP7](https://blog.webfaction.com/2015/12/php-7-is-here/) in it's hosting package.
