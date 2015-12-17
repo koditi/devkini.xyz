@@ -18,6 +18,7 @@ Hello, this is the first series of updates on software development that we hope 
   - [Introducing OpenAI](https://openai.com/blog/introducing-openai/).
 9. Let's Encrypt, a project to provide an easy to use free SSL certificate for everyone, [now opened to public in limited beta](http://blog.apnic.net/2015/12/16/now-everybody-can-https/)
 10. AMD announced [GPUOpen - Open Source Tools, Graphics Effects, Libraries And SDKs](http://wccftech.com/amds-answer-to-nvidias-gameworks-gpuopen-announced-open-source-tools-graphics-effects-and-libraries/) for GPU based development.
+11. [Projek Buku GIT](http://iszuddinismail.com/projek-buku-git/) - A project to provide GIT guide book in Malay was started by prominent developer [Iszuddin Ismail](http://iszuddinismail.com/).
 
 ## Products/Services
 
