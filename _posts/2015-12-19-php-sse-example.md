@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PHP: Server Sent Event (SSE) Example
+title: "PHP: Server Sent Event (SSE) Example"
 author: kamal
 tags: sse,php,javascript,ajax
 ---
