@@ -17,11 +17,14 @@ Benjamin Black dan bosnya Chris Pinkham kemudian menulis kertas cadangan bagaima
 
 Kertas cadangan tersebut kemudian dipersembahkan kepada CEO Amazon, Jeff Bezos yang ternyata terus berminat dengan idea penjualan *virtual server* dan meminta proposal yang lebih lengkap disediakan.
 
-Chris Pinkham kemudian ditugaskan untuk mengepalai projek pembinaan *virtual server* yang kemudiannya dikenali sebagai EC2. Yang lebih menariknya di sini adalah Chris Pinkham pada masa itu telah membuat keputusan untuk kembali ke tempat asal beliau di Afrika Selatan. Amazon bagaimana pun tidak ingin melepaskan beliau dan akhirnya memberi pelepasan kepada beliau untuk menjalankan projek EC2 secara remote dari Cape Town, Afrika Selatan. Dari sana, Chris Pinkham membentuk kumpulan engineer yang bekerja membina EC2 selama 2 tahun.
+Chris Pinkham kemudian ditugaskan untuk mengepalai projek pembinaan *virtual server* yang kemudiannya dikenali sebagai EC2. Yang lebih menariknya di sini adalah Chris Pinkham pada masa itu telah membuat keputusan untuk kembali ke tempat asal beliau di Afrika Selatan.
+
+Amazon bagaimana pun tidak ingin melepaskan beliau dan akhirnya memberi pelepasan kepada beliau untuk menjalankan projek EC2 secara remote dari Cape Town, Afrika Selatan. Dari sana, Chris Pinkham membentuk kumpulan engineer yang bekerja membina EC2 selama 2 tahun.
 
 Antara dapatan menarik daripada kisah ini adalah bagaimana Jeff Bezos memberi perhatian kepada idea serta cadangan pekerjanya dan telah dijadikan *case study* dalam buku [The Alliance](http://www.amazon.com/The-Alliance-Managing-Talent-Networked/dp/1625275773/) sebagai satu contoh gaya pengurusan yang baik.
 
 Sumber:-
+
 1. http://www.businessinsider.com/amazons-game-changing-cloud-was-built-by-some-guys-in-south-africa-2012-3
 2. http://www.businessinsider.my/benjamin-black-and-amazon-web-services-2014-7/
 3. http://blog.b3k.us/2009/01/25/ec2-origins.html
