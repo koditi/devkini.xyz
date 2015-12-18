@@ -2,7 +2,7 @@
 layout: post
 title: PHP: Server Sent Event (SSE) Example
 author: kamal
-tags: sse, php, javascript, ajax
+tags: sse,php,javascript,ajax
 ---
 
 This is a basic example on how to implement Server Sent Event (SSE) with PHP. More lengthy explanation can be read at [HTML5 Rocks article](http://www.html5rocks.com/en/tutorials/eventsource/basics/) so I'll just focus on the example.
@@ -83,3 +83,25 @@ do {
 } while(true);
 ?>
 ```
+
+Create the sqlite database tables for testing this:-
+
+```
+> sqlite3 sse.db
+SQLite version 3.8.4.1 2014-03-11 15:27:36
+Enter ".help" for usage hints.
+sqlite> create table messages (id integer primary key autoincrement, message text);
+sqlite> insert into messages (message) values ('hello world');
+```
+
+We can test this by running php development server:-
+
+```
+php -S 127.0.0.1:8000
+```
+And open up in browser `http://localhost:8000/index.html`. We should see the first "hello world" message. If we insert a second message:-
+
+```
+sqlite> insert into messages (message) values ('hello world 2');
+```
+We can see it appear at the second line, without having to refresh the browser ! Keep adding the messages and will appear on the browser. This is the gist of SSE and can be a foundation to build something more useful like user notifications etc.
