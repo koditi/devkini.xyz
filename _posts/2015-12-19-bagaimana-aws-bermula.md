@@ -14,3 +14,7 @@ Setelah sekian lama menggunakan perkhidmatan AWS ini, saya terdorong untuk menye
 Idea asal AWS datang daripada seorang *engineer* biasa di Amazon sekitar tahun 2003. [Benjamin Black](http://blog.b3k.us/) bekerja sebagai Network Engineer dengan pengurusnya Chris Pinkham. Sebagai Network Engineer, beliau bertanggung-jawab memastikan kelancaran sistem rangkaian yang memacu laman Amazon.com.
 
 Benjamin Black dan bosnya Chris Pinkham kemudian menulis kertas cadangan bagaimana sistem rangkaian dan perkomputeran di Amazon dapat diperbaikkan dalam bentuk yang lebih *standardized* serta diautomasi sepenuhnya (*fully automated*). Di penghujung kertas cadangan tersebut, mereka menyatakan kemungkinan untuk menjual *virtual server* sebagai perkhidmatan.
+
+Kertas cadangan tersebut kemudian dipersembahkan kepada CEO Amazon, Jeff Bezos yang ternyata terus berminat dengan idea penjualan *virtual server* dan meminta proposal yang lebih lengkap disediakan.
+
+Chris Pinkham kemudian ditugaskan untuk mengepalai projek pembinaan *virtual server* yang kemudiannya dikenali sebagai EC2. Yang lebih menariknya di sini adalah Chris Pinkham pada masa itu telah membuat keputusan untuk kembali ke tempat asal beliau di Afrika Selatan. Amazon bagaimana pun tidak ingin melepaskan beliau dan akhirnya memberi pelepasan kepada beliau untuk menjalankan projek EC2 secara remote dari Cape Town, Afrika Selatan. Dari sana, Chris Pinkham membentuk kumpulan engineer yang bekerja membina EC2 selama 2 tahun.
