@@ -110,16 +110,16 @@ We can see it appear at the second line, without having to refresh the browser !
 
 So how it actually work ?
 
-1. Browser open connection to `sse.php`.
-2. On the server, it return data in the format of:-
+- Browser open connection to `sse.php`.
+- On the server, it return data in the format of:-
 ```
 data: hello\n
 data: world\n\n
 ```
-3. Browser assume the data stream end when it encounter double newlines `\n\n`, and fire an event with the data.
-4. Our PHP code keep the connection open for x amount time, and can keep sending the data to the `EventSource` on the browser.
-5. If the server close the connection, `EventSource` will create new connection, and the cycle repeat.
-6. We can optionally specify an id for the data and the id will be sent back to the server in the header as `Last-Event-ID`:-
+- Browser assume the data stream end when it encounter double newlines `\n\n`, and fire an event with the data.
+- Our PHP code keep the connection open for x amount time, and can keep sending the data to the `EventSource` on the browser.
+- If the server close the connection, `EventSource` will create new connection, and the cycle repeat.
+- We can optionally specify an id for the data and the id will be sent back to the server in the header as `Last-Event-ID`:-
 
 ```
 id: 1002\n
@@ -128,4 +128,4 @@ data: world\n\n
 ```
 This is what we use in the above example, to only query for new messages to be sent to browser.
 
-7. The data stream also can be named, allowing us to specify multiple `EventSource` channel that can be used for different purposes.
+- The data stream also can be named, allowing us to specify multiple `EventSource` channel that can be used for different purposes.
