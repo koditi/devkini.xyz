@@ -105,3 +105,15 @@ And open up in browser `http://localhost:8000/index.html`. We should see the fir
 sqlite> insert into messages (message) values ('hello world 2');
 ```
 We can see it appear at the second line, without having to refresh the browser ! Keep adding the messages and will appear on the browser. This is the gist of SSE and can be a foundation to build something more useful like user notifications etc.
+
+So how it actually work ?
+
+1. Browser open connection to `sse.php`.
+2. On the server, it return data in the format of:-
+```
+data: hello\n
+data: world\n\n
+```
+3. Browser assume the data stream end when it encounter double newlines `\n\n`, and fire an event with the data.
+4. Our PHP code keep the connection open for x amount time, and can keep sending the data to the `EventSource` on the browser.
+5. If the server close the connection, `EventSource` will create new connection, and the cycle repeat.
