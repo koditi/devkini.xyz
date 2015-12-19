@@ -127,4 +127,5 @@ data: hello\n
 data: world\n\n
 ```
 This is what we use in the above example, to only query for new messages to be sent to browser.
+
 7. The data stream also can be named, allowing us to specify multiple `EventSource` channel that can be used for different purposes.
