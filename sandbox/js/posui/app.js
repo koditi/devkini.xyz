@@ -39,6 +39,9 @@ new Vue({
                 this.order.items.push(item);
             }
             item.total = item.price * item.qty;
+        },
+        removeItem: function(event, item) {
+            this.order.items.$remove(item);
         }
     }
 });
