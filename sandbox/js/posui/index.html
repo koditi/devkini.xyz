@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+</head>
+<body>
+<div class="row">
+</div>
+<div class="row" id="app">
+    <div class="col-md-4">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Order Items
+            </div>
+            <div class="panel-body">
+                <table class="table">
+                    <thead>
+                        <th>Item Name</th>
+                        <th>Qty</th>
+                        <th>Price</th>
+                    </thead>
+                    <tbody>
+                        <tr v-for="item in order.items">
+                            <td>{{ item.name }}</td>
+                            <td>{{ item.qty }}</td>
+                            <td>{{ item.total }}</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><b>Total</b></td>
+                            <td>{{ order.getTotal() }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="panel panel-info">
+             <div class="panel-heading">
+                Select Items
+            </div>
+            <div class="panel-body">
+                <div class="row" v-for="item_rows in items">
+                    <div class="col-md-2" v-for="item in item_rows">
+                        <div v-on:click="addOrderItem" data-name="{{ item.name }}" data-price="{{ item.price }}" class="col-md-2">{{ item.name }}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">Panel footer</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="http://vuejs.org/js/vue.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
