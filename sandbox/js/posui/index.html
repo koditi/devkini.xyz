@@ -44,7 +44,8 @@
             <div class="panel-footer">Panel footer</div>
         </div>
         <!-- debugging -->
-        <pre>{{ $data | json }}</pre>
+        <input type="checkbox" v-model="debug" /> Enable Debug
+        <pre v-if="debug">{{ $data | json }}</pre>
     </div>
 </div>
 
@@ -71,7 +72,7 @@
             </tr>
         </tbody>
     </table>
-    <pre>{{ $data | json }}</pre>
+    <pre v-if="debug">{{ $data | json }}</pre>
 </template>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>

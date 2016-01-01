@@ -1,6 +1,6 @@
 Vue.component('checkout', {
     template: '#checkout-template',
-    props: ['orders'],
+    props: ['orders', 'debug'],
     computed: {
         totalOrder: function () {
             return _.sum(this.orders, 'total');
@@ -29,7 +29,8 @@ new Vue({
             { name: 'Item-9', barcode: _.uniqueId('bar'), price: 10},
             { name: 'Item-10', barcode: _.uniqueId('bar'), price: 10}
         ],
-        search: ''
+        search: '',
+        debug: false
     },
     methods: {
         addOrder: function(item) {
