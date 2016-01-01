@@ -50,6 +50,12 @@
                 Select Items
             </div>
             <div class="panel-body">
+                <div class="row">
+                    <form>
+  <div class="form-group">
+    <input type="text" class="form-control" id="search-item" placeholder="Search Items">
+  </div>
+                </div>
                 <div class="row" v-for="item_rows in items">
                     <div class="col-md-2" v-for="item in item_rows">
                         <div v-on:click="addOrderItem" data-name="{{ item.name }}" data-price="{{ item.price }}" class="col-md-2">{{ item.name }}</div>
