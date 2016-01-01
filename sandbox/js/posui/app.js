@@ -1,6 +1,11 @@
 Vue.component('checkout', {
     template: '#checkout-template',
     props: ['orders'],
+    computed: {
+        totalOrder: function () {
+            return _.sum(this.orders, 'total');
+        }
+    },
     methods: {
         removeOrder: function(item) {
             this.orders.$remove(item);
@@ -12,13 +17,6 @@ new Vue({
     el: '#app',
     data: {
         orders: [],
-        order: {
-            items: [
-            ],
-            getTotal: function() {
-                return _.sum(this.items, 'total');
-            }
-        },
         items: [
             { name: 'Item-1', baracode: _.uniqueId('bar'), price: 15},
             { name: 'Item-2', baracode: _.uniqueId('bar'), price: 5},
