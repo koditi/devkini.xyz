@@ -10,8 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
 </head>
 <body>
-<div class="row">
-</div>
+<div class="row"></div>
 <div class="row" id="app">
     <div class="col-md-4">
         <div class="panel panel-primary">
@@ -52,24 +51,26 @@
             <div class="panel-body">
                 <div class="row">
                     <form>
-  <div class="form-group">
-    <input type="text" class="form-control" id="search-item" placeholder="Search Items">
-  </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search Items">
+                        </div>
+                    </form>
                 </div>
-                <div class="row" v-for="item_rows in items">
-                    <div class="col-md-2" v-for="item in item_rows">
+                <div class="row">
+                    <div class="col-md-2" v-for="item in items">
                         <div v-on:click="addOrderItem" data-name="{{ item.name }}" data-price="{{ item.price }}" class="col-md-2">{{ item.name }}</div>
                     </div>
                 </div>
             </div>
             <div class="panel-footer">Panel footer</div>
-            </div>
         </div>
+        <!-- debugging -->
+        <pre>{{ $data | json }}</pre>
     </div>
 </div>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<script src="http://vuejs.org/js/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.13/vue.min.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
