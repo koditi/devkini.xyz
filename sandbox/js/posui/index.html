@@ -10,8 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
 </head>
 <body>
-<div class="row">
-</div>
+<div class="row"></div>
 <div class="row" id="app">
     <div class="col-md-4">
         <div class="panel panel-primary">
@@ -19,28 +18,7 @@
                 Order Items
             </div>
             <div class="panel-body">
-                <table class="table">
-                    <thead>
-                        <th>Item Name</th>
-                        <th>Qty</th>
-                        <th>Price</th>
-                        <th></th>
-                    </thead>
-                    <tbody>
-                        <tr v-for="item in order.items">
-                            <td>{{ item.name }}</td>
-                            <td>{{ item.qty }}</td>
-                            <td>{{ item.total }}</td>
-                            <td v-on:click="removeItem($event, item)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td><b>Total</b></td>
-                            <td>{{ order.getTotal() }}</td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <checkout :orders="orders"></checkout>
             </div>
         </div>
     </div>
@@ -52,24 +30,52 @@
             <div class="panel-body">
                 <div class="row">
                     <form>
-  <div class="form-group">
-    <input type="text" class="form-control" id="search-item" placeholder="Search Items">
-  </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search Items" v-model="search">
+                        </div>
+                    </form>
                 </div>
-                <div class="row" v-for="item_rows in items">
-                    <div class="col-md-2" v-for="item in item_rows">
-                        <div v-on:click="addOrderItem" data-name="{{ item.name }}" data-price="{{ item.price }}" class="col-md-2">{{ item.name }}</div>
+                <div class="row">
+                    <div class="col-md-2" v-for="item in items | filterBy search">
+                        <div class="col-md-2" @click="addOrder(item)">{{ item.name }}</div>
                     </div>
                 </div>
             </div>
             <div class="panel-footer">Panel footer</div>
-            </div>
         </div>
+        <!-- debugging -->
+        <pre>{{ $data | json }}</pre>
     </div>
 </div>
+
+<template id="checkout-template">
+    <table class="table">
+        <thead>
+            <th>Item Name</th>
+            <th>Qty</th>
+            <th>Price</th>
+            <th></th>
+        </thead>
+        <tbody>
+            <tr v-for="order in orders">
+                <td>{{ order.name }}</td>
+                <td>{{ order.qty }}</td>
+                <td>{{ order.total }}</td>
+                <td @click="removeOrder(order)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><b>Total</b></td>
+                <td>{{ totalOrder }}</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <pre>{{ $data | json }}</pre>
+</template>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<script src="http://vuejs.org/js/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.13/vue.min.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

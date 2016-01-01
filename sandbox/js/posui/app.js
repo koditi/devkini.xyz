@@ -1,47 +1,50 @@
+Vue.component('checkout', {
+    template: '#checkout-template',
+    props: ['orders'],
+    computed: {
+        totalOrder: function () {
+            return _.sum(this.orders, 'total');
+        }
+    },
+    methods: {
+        removeOrder: function(item) {
+            this.orders.$remove(item);
+        }
+    }
+});
+
 new Vue({
     el: '#app',
     data: {
-        order: {
-            items: [
-            ],
-            getTotal: function() {
-                return _.sum(this.items, 'total');
-            }
-        },
+        orders: [],
         items: [
-            [
-                { name: 'Item-1', price: 15},
-                { name: 'Item-2', price: 5},
-                { name: 'Item-3', price: 11},
-                { name: 'Item-4', price: 10}
-            ],
-            [
-                { name: 'Item-5', price: 15},
-                { name: 'Item-6', price: 5},
-                { name: 'Item-7', price: 11},
-                { name: 'Item-8', price: 10}
-            ]
-        ]
+            { name: 'Item-1', barcode: _.uniqueId('bar'), price: 15},
+            { name: 'Item-2', barcode: _.uniqueId('bar'), price: 5},
+            { name: 'Item-3', barcode: _.uniqueId('bar'), price: 11},
+            { name: 'Item-4', barcode: _.uniqueId('bar'), price: 10},
+            { name: 'Item-5', barcode: _.uniqueId('bar'), price: 15},
+            { name: 'Item-6', barcode: _.uniqueId('bar'), price: 5},
+            { name: 'Item-7', barcode: _.uniqueId('bar'), price: 11},
+            { name: 'Item-8', barcode: _.uniqueId('bar'), price: 10},
+            { name: 'Item-9', barcode: _.uniqueId('bar'), price: 10},
+            { name: 'Item-10', barcode: _.uniqueId('bar'), price: 10}
+        ],
+        search: ''
     },
     methods: {
-        addOrderItem: function(event) {
-            console.log(event);
-            var item, item_name, item_price, item_qty = 1;
+        addOrder: function(item) {
+            var order, quantity = 1;
 
-            item_name = event.target.getAttribute('data-name');
-            item_price = event.target.getAttribute('data-price');
-            item = _.find(this.order.items, {name: item_name});
-            if (item) {
-                item_qty = item.qty++;
+            order = _.find(this.orders, {name: item.name});
+
+            if (order) {
+                quantity = order.qty++;
+            } else {
+                order = {name: item.name, price: item.price, qty: quantity, total: item.price};
+                this.orders.push(order);
             }
-            else {
-                item = {name: item_name, price: item_price, qty: item_qty, total: item_price};
-                this.order.items.push(item);
-            }
-            item.total = item.price * item.qty;
-        },
-        removeItem: function(event, item) {
-            this.order.items.$remove(item);
+
+            order.total = order.price * order.qty;
         }
     }
 });
