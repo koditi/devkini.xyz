@@ -1,3 +1,5 @@
+[![Join the chat at https://gitter.im/devkini/devkini.github.io](https://badges.gitter.im/devkini/devkini.github.io.svg)](https://gitter.im/devkini/devkini.github.io?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 # Jekyll Now
 
 **Jekyll** is a static site generator that's perfect for GitHub hosted blogs ([Jekyll Repository](https://github.com/jekyll/jekyll))
