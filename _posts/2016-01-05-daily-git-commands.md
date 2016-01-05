@@ -24,3 +24,10 @@ Set color on output (by default git already use color but not on OSX):-
 ```
 git diff --color
 ```
+
+Show diff on index/staging area:-
+
+```
+git diff --cached # OR
+git diff --staged
+```
