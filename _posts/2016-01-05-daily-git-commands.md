@@ -31,3 +31,16 @@ Show diff on index/staging area:-
 git diff --cached # OR
 git diff --staged
 ```
+
+Delete all branch except master:-
+
+```
+git branch | grep -v master | xargs git branch -d
+```
+
+Use `-D` instead to force delete. Sometimes git refused to delete like this:-
+
+```
+error: The branch '41-messages-too-long' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D 41-messages-too-long'.
+```
