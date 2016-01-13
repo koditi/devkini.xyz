@@ -16,6 +16,8 @@ The workaround for search as of now is to search your emails (if you enable noti
 
 This [blog post](http://ariya.ofilabs.com/2012/08/github-and-lack-of-searchability.html) also talk in length on the lack of search issue.
 
+<!--more-->
+
 ## Triangular Workflow
 This work great so far except for a few hiccups but let's look at what it mean first. This diagram describe it well:-
 
