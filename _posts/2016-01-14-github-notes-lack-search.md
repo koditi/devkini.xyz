@@ -5,7 +5,7 @@ author: kamal
 tags: github, git
 ---
 
-It's been a while since we fully moved all our project repos (in svn) to Github. So I'll try to share our experiences so far.
+It's been a while since we fully moved all our project repos (in svn) to Github. So I'll try to share our experiences so far. This is a work in progress so I'll keep adding more as we progress.
 
 Search definitely lacking. You can only search through issues and code per repo only, or through all repos globally on Github, which useless for private repos. While commenting on commit and pull request are great for code review, unable to search it back is definitely an awful experience as that what make code review valuable when you trying to figure out the past on why certain thing being done in certain way.
 
