@@ -15,3 +15,14 @@ The workaround for search as of now is to search your emails (if you enable noti
 * "New comment on issue" <keyword> - issue search.
 
 This [blog post](http://ariya.ofilabs.com/2012/08/github-and-lack-of-searchability.html) also talk in length on the lack of search issue.
+
+## Triangular Workflow
+This work great so far except for a few hiccups but let's look at what it mean first. This diagram describe it well:-
+
+<img src="https://cloud.githubusercontent.com/assets/1319791/8943755/5dcdcae4-354a-11e5-9f82-915914fad4f7.png"></img>
+Image ref - https://github.com/blog/2042-git-2-5-including-multiple-worktrees-and-triangular-workflows
+
+Most of our repos only writable by a few developers, which the rest of the team will need to fork and submit their changes through a Pull Request. Few of the hiccups I mentioned just now:-
+
+* Collaboration between developers - When a developer submit a PR, other fellow dev might need to chip in some fixes and naturally, he would also submit a PR against the other developer's fork. But this making the workflow more complicated, not to mention the discussion now all over the place, instead in just one single PR. So for now what we did is require all developers to set their forks to be writable by entire team, so any developer that need to contribute will just need to clone the repo, and commit to the same branch, which would then appear in the same PR.
+* Tagging release.
