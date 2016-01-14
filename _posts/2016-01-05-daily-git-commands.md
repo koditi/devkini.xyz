@@ -44,3 +44,10 @@ Use `-D` instead to force delete. Sometimes git refused to delete like this:-
 error: The branch '41-messages-too-long' is not fully merged.
 If you are sure you want to delete it, run 'git branch -D 41-messages-too-long'.
 ```
+
+List commits on local but not yet on remote (kind of `hg outgoing`):-
+
+```
+git log origin/master..master
+```
+http://stackoverflow.com/questions/7624790/what-is-the-git-equivalent-of-of-hg-outgoing-hg-out-or-hg-incoming-hg-in
