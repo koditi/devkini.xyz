@@ -72,3 +72,9 @@ e - manually edit the current hunk
 ? - print help
 ```
 So the proposed hunk might contain 2 unrelated changes you don't want to commit together. The `s` option allow you to split the hunk into much smaller hunk.
+
+Stash untracked files:-
+
+```
+git stash save -u
+```
