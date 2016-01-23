@@ -7,6 +7,8 @@
     <ul>
         <li v-for="post in posts">{{ post.message }}</li>
     </ul>
+    <button v-if="!loggedIn" @click="login()">Login to view your posts</button>
+    <button v-if="loggedIn" @click="getPost()">Get Posts</button>
 </div>
 <script>
     window.fbAsyncInit = function() {
@@ -19,20 +21,25 @@
         function myFacebookLogin() {
             FB.login(function(){}, {scope: 'publish_actions, user_posts'});
         }
-
-        FB.getLoginStatus(function(response) {
-            if (response.status === 'connected') {
-                FB.api('/me/feed', function(response) {
-                    new Vue({
-                        el: '#app',
-                        data: {
-                            posts: response.data    
+        
+        new Vue({
+            el: "#app",
+            data: {
+                posts: [],
+                loggedIn: false
+            },
+            methods: {
+                getPost: function() {
+                    FB.getLoginStatus(function(response) {
+                        if (response.status === 'connected') {
+                            this.loggedIn = true;
+                            FB.api('/me/feed', function(response) {
+                                this.posts = response.data;
+                            });
                         }
-                    });   
-                });
-            }   
-            else {
-                myFacebookLogin();
+                    });
+                },
+                login: myFacebookLogin
             }
         });
     };
