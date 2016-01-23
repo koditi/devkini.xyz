@@ -19,10 +19,6 @@
             version    : 'v2.5'
         });
     
-        function myFacebookLogin() {
-            FB.login(function(){}, {scope: 'publish_actions, user_posts'});
-        }
-        
         new Vue({
             el: "#app",
             data: {
@@ -31,20 +27,16 @@
             },
             methods: {
                 getPost: function() {
-                    FB.getLoginStatus(function(response) {
-                        if (response.status === 'connected') {
-                            this.loggedIn = true;
-                            FB.api('/me/feed', function(response) {
-                                this.posts = response.data;
-                                console.log(this.posts);
-                            });
-                        }
+                    var self = this;
+                    FB.api('/me/feed', function(response) {
+                        self.posts = response.data;
                     });
                 },
                 login: function() {
+                    var self = this;
                     FB.login(function(response){
                         if (response.status === 'connected') {
-                            this.loggedIn = true;
+                            self.loggedIn = true;
                         }
                     }, {scope: 'publish_actions, user_posts'});
                 }
