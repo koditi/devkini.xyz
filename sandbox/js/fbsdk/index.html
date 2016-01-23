@@ -8,7 +8,7 @@
         <li v-for="post in posts">{{ post.message }}</li>
     </ul>
     <button v-if="!loggedIn" @click="login()">Login to view your posts</button>
-    <button v-if="loggedIn" @click="getPost()">Get Posts</button>
+    <button @click="getPost()">Get Posts</button>
 </div>
 <script>
     window.fbAsyncInit = function() {
