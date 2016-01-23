@@ -39,7 +39,13 @@
                         }
                     });
                 },
-                login: myFacebookLogin
+                login: function() {
+                    FB.login(function(response){
+                        if (response.status === 'connected') {
+                            this.loggedIn = true;
+                        }
+                    }, {scope: 'publish_actions, user_posts'});
+                }
             }
         });
     };
