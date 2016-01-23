@@ -9,6 +9,7 @@
     </ul>
     <button v-if="!loggedIn" @click="login()">Login to view your posts</button>
     <button @click="getPost()">Get Posts</button>
+    <pre {{ $data | json }}</pre>
 </div>
 <script>
     window.fbAsyncInit = function() {
