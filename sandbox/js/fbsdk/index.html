@@ -1,13 +1,26 @@
 <html>
 <body>
 <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '1767915503436232',
-      xfbml      : true,
-      version    : 'v2.5'
-    });
-  };
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '1767915503436232',
+            xfbml      : true,
+            version    : 'v2.5'
+        });
+    
+        function myFacebookLogin() {
+            FB.login(function(){}, {scope: 'publish_actions, user_posts'});
+        }
+
+        FB.getLoginStatus(function(response) {
+            if (response.status === 'connected') {
+                console.log('Logged in.');
+            }   
+            else {
+                myFacebookLogin();
+            }
+        });
+    };
 
   (function(d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];
@@ -16,20 +29,6 @@
      js.src = "//connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
-   
-   // Only works after `FB.init` is called
-function myFacebookLogin() {
-  FB.login(function(){}, {scope: 'publish_actions, user_posts'});
-}
-
-FB.getLoginStatus(function(response) {
-  if (response.status === 'connected') {
-    console.log('Logged in.');
-  }
-  else {
-    myFacebookLogin();
-  }
-});
 </script>
 </body>
 </html>
