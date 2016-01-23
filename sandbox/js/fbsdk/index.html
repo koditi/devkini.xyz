@@ -21,13 +21,15 @@
 function myFacebookLogin() {
   FB.login(function(){}, {scope: 'publish_actions, user_posts'});
 }
+
+FB.getLoginStatus(function(response) {
+  if (response.status === 'connected') {
+    console.log('Logged in.');
+  }
+  else {
+    myFacebookLogin();
+  }
+});
 </script>
-<div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
-</div>
-<button onclick="myFacebookLogin()">Login with Facebook</button>
 </body>
 </html>
