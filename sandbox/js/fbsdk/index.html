@@ -5,7 +5,10 @@
 <body>
 <div id="app">
     <ul>
-        <li v-for="post in posts">{{ post.message }}</li>
+        <li v-for="post in posts">
+            {{ post.message }}
+            <span @click="getShare(post.id)">Shares: {{ share }}</span>
+        </li>
     </ul>
     <button v-if="!loggedIn" @click="login()">Login to view your posts</button>
     <button @click="getPost()">Get Posts</button>
@@ -23,7 +26,8 @@
             el: "#app",
             data: {
                 posts: [],
-                loggedIn: false
+                loggedIn: false,
+                share: null
             },
             methods: {
                 getPost: function() {
@@ -39,6 +43,17 @@
                             self.loggedIn = true;
                         }
                     }, {scope: 'publish_actions, user_posts'});
+                },
+                getShare: function(post_id) {
+                    var self = this;
+                    FB.api('/' + post_id, {fields: 'shares'}, function(response) {
+                        if (response && !response.error) {
+                            console.log(response.shares);
+                            if (response.shares) {
+                                self.share = response.shares.count;
+                            }
+                        }
+                    });
                 }
             }
         });
