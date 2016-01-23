@@ -1,5 +1,13 @@
 <html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.13/vue.min.js"></script>
+</head>
 <body>
+<div id="app">
+    <ul>
+        <li v-for="post in posts">{{ post.message }}</li>
+    </ul>
+</div>
 <script>
     window.fbAsyncInit = function() {
         FB.init({
@@ -14,7 +22,14 @@
 
         FB.getLoginStatus(function(response) {
             if (response.status === 'connected') {
-                console.log('Logged in.');
+                FB.api('/me/feed', function(response) {
+                    new Vue({
+                        el: '#app',
+                        data: {
+                            posts: response.data    
+                        }
+                    });   
+                }
             }   
             else {
                 myFacebookLogin();
