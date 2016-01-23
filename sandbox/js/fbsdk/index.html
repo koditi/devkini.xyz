@@ -16,6 +16,11 @@
      js.src = "//connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
+   
+   // Only works after `FB.init` is called
+function myFacebookLogin() {
+  FB.login(function(){}, {scope: 'publish_actions'});
+}
 </script>
 <div
   class="fb-like"
@@ -23,5 +28,6 @@
   data-width="450"
   data-show-faces="true">
 </div>
+<button onclick="myFacebookLogin()">Login with Facebook</button>
 </body>
 </html>
