@@ -33,3 +33,5 @@ The `theirs` merge strategy option mean if there's conflict (similar filename fo
 version will be used.
 
 I'd first seen this being used in [Openshift example](https://github.com/openshift/django-example).
+
+Other merge tips from Orchestra project - http://read.cookbook.orchestraplatform.com/installation/sync.html.
