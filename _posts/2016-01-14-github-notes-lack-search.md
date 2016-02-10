@@ -21,8 +21,8 @@ This [blog post](http://ariya.ofilabs.com/2012/08/github-and-lack-of-searchabili
 ## Triangular Workflow
 This work great so far except for a few hiccups but let's look at what it mean first. This diagram describe it well:-
 
-<img src="https://cloud.githubusercontent.com/assets/1319791/8943755/5dcdcae4-354a-11e5-9f82-915914fad4f7.png"></img>
-Image ref - https://github.com/blog/2042-git-2-5-including-multiple-worktrees-and-triangular-workflows
+<img src="https://cloud.githubusercontent.com/assets/1319791/8943755/5dcdcae4-354a-11e5-9f82-915914fad4f7.png" />
+Image ref - [https://github.com/blog/2042-git-2-5-including-multiple-worktrees-and-triangular-workflows](https://github.com/blog/2042-git-2-5-including-multiple-worktrees-and-triangular-workflows)
 
 Most of our repos only writable by a few developers, which the rest of the team will need to fork and submit their changes through a Pull Request. Few of the hiccups I mentioned just now:-
 
