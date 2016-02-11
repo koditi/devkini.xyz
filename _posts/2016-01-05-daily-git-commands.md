@@ -80,3 +80,8 @@ So the proposed hunk might contain 2 unrelated changes you don't want to commit 
 ```
 git stash save -u
 ```
+
+### Stash patch
+Discovered this today. I'm on a branch and there's some changes there that I want to commit to master. Git won't allow you to checkout `master` unless you commit all the changes, or stash them. But there's only certain hunk that I want to commit to master, while the rest should be committed to the current branch (when ready). So it would be great if I can stash all the changes into proper hunks that I want to commit.
+
+So `git stash -p` is the equivalent of `git add -p` for stashing.
