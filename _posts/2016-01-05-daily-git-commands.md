@@ -19,7 +19,8 @@ git reset HEAD~1
 git merge --abort
 ```
 
-### Set color on output (by default git already use color but not on OSX):-
+### Set color on output
+By default git already use color but not on OSX:-
 
 ```
 git diff --color
@@ -32,7 +33,7 @@ git diff --cached # OR
 git diff --staged
 ```
 
-### Delete all branch except master:-
+### Delete all branch except master
 
 ```
 git branch | grep -v master | xargs git branch -d
@@ -52,7 +53,8 @@ git log origin/master..master
 ```
 http://stackoverflow.com/questions/7624790/what-is-the-git-equivalent-of-of-hg-outgoing-hg-out-or-hg-incoming-hg-in
 
-### Git add patch (`git add -p`) I think is pretty well known but I've just discovered one of it's very handy option
+### Git add patch
+`git add -p` I think is pretty well known but I've just discovered one of it's very handy option
 
 ```
 Stage this hunk [y,n,q,a,d,/,K,g,e,?]? s
