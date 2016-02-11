@@ -86,4 +86,5 @@ Discovered this today. I'm on a branch and there's some changes there that I wan
 
 So `git stash -p` is the equivalent of `git add -p` for stashing.
 
-Reference - http://stackoverflow.com/questions/3040833/stash-only-one-file-out-of-multiple-files-that-have-changed-with-git
+Reference -
+[http://stackoverflow.com/questions/3040833/stash-only-one-file-out-of-multiple-files-that-have-changed-with-git](http://stackoverflow.com/questions/3040833/stash-only-one-file-out-of-multiple-files-that-have-changed-with-git)
