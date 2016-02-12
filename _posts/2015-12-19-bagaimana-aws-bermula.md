@@ -27,6 +27,6 @@ Antara dapatan menarik daripada kisah ini adalah bagaimana Jeff Bezos memberi pe
 
 Sumber:-
 
-1. http://www.businessinsider.com/amazons-game-changing-cloud-was-built-by-some-guys-in-south-africa-2012-3
-2. http://www.businessinsider.my/benjamin-black-and-amazon-web-services-2014-7/
-3. http://blog.b3k.us/2009/01/25/ec2-origins.html
+1. [http://www.businessinsider.com/amazons-game-changing-cloud-was-built-by-some-guys-in-south-africa-2012-3](http://www.businessinsider.com/amazons-game-changing-cloud-was-built-by-some-guys-in-south-africa-2012-3)
+2. [http://www.businessinsider.my/benjamin-black-and-amazon-web-services-2014-7/](http://www.businessinsider.my/benjamin-black-and-amazon-web-services-2014-7/)
+3. [http://blog.b3k.us/2009/01/25/ec2-origins.html](http://blog.b3k.us/2009/01/25/ec2-origins.html)

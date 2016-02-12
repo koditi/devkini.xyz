@@ -51,7 +51,7 @@ If you are sure you want to delete it, run 'git branch -D 41-messages-too-long'.
 ```
 git log origin/master..master
 ```
-http://stackoverflow.com/questions/7624790/what-is-the-git-equivalent-of-of-hg-outgoing-hg-out-or-hg-incoming-hg-in
+[http://stackoverflow.com/questions/7624790/what-is-the-git-equivalent-of-of-hg-outgoing-hg-out-or-hg-incoming-hg-in](http://stackoverflow.com/questions/7624790/what-is-the-git-equivalent-of-of-hg-outgoing-hg-out-or-hg-incoming-hg-in)
 
 ### Git add patch
 `git add -p` I think is pretty well known but I've just discovered one of it's very handy option
@@ -86,4 +86,5 @@ Discovered this today. I'm on a branch and there's some changes there that I wan
 
 So `git stash -p` is the equivalent of `git add -p` for stashing.
 
-Reference - http://stackoverflow.com/questions/3040833/stash-only-one-file-out-of-multiple-files-that-have-changed-with-git
+Reference -
+[http://stackoverflow.com/questions/3040833/stash-only-one-file-out-of-multiple-files-that-have-changed-with-git](http://stackoverflow.com/questions/3040833/stash-only-one-file-out-of-multiple-files-that-have-changed-with-git)
