@@ -81,4 +81,7 @@ exclude:
     - README.md
     - CNAME
 
+include:
+    - .well-known
+    
 excerpt_separator: "<!--more-->"
