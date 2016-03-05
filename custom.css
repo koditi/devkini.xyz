@@ -10,3 +10,17 @@
   margin-top: 5px;
   text-align: center;
 }
+
+.tags {
+  padding-top: 1px;
+  margin-top: 1px;
+  font-size: 1em;
+  font-style: italic;
+}
+
+
+/* to make tags look a bit nicer */
+h1 {
+  margin-bottom: 0px;
+  line-height: normal;
+}

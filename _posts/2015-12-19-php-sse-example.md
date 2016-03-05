@@ -2,7 +2,11 @@
 layout: post
 title: "PHP: Server Sent Event (SSE) Example"
 author: kamal
-tags: sse,php,javascript,ajax
+tags:
+    - sse
+    - php
+    - javascript
+    - ajax
 ---
 
 This is a basic example on how to implement Server Sent Event (SSE) with PHP. More lengthy explanation can be read at [HTML5 Rocks article](http://www.html5rocks.com/en/tutorials/eventsource/basics/) so I'll just focus on the example.

@@ -2,7 +2,8 @@
 layout: post
 title: JavaScript Promise
 author: kamal
-tags: javascript
+tags:
+    - javascript
 ---
 
 Update 1: Thanks to [fadzlan](https://github.com/fadzlan) for [fixing](https://github.com/devkini/devkini.github.io/pull/1) the second example.

@@ -2,7 +2,9 @@
 layout: post
 title: "Github: Notes and Lack of Search"
 author: kamal
-tags: github, git
+tags:
+    - github
+    - git
 ---
 
 It's been a while since we fully moved all our project repos (in svn) to Github. So I'll try to share our experiences so far. This is a work in progress so I'll keep adding more as we progress.

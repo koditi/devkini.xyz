@@ -2,7 +2,9 @@
 layout: post
 title: "Telegram: Generasi bot"
 author: kamal
-tags: telegram, bot
+tags:
+    - telegram
+    - bot
 ---
 
 Ada 2 generasi bot. Generasi awal, yang seperti user biasa - perlukan phone number dan seperti user biasa dapat baca kesemua mesej dalam group yang dia join. Bot yang guna command mula dengan `!` tu adalah generasi awal.

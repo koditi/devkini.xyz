@@ -2,7 +2,9 @@
 layout: post
 title: "GIT: Finding Parent Branch"
 author: kamal
-tags: git, tips
+tags:
+    - git
+    - tips
 ---
 
 When you create a branch in git, using command such as:-

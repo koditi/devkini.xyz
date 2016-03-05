@@ -4,6 +4,7 @@ pages:
   script:
   - gem install jekyll-sitemap
   - gem install jekyll
+  - gem install jekyll-tagging
   - jekyll build -d public/
   artifacts:
     paths:
