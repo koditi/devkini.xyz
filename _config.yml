@@ -89,3 +89,11 @@ excerpt_separator: "<!--more-->"
 tag_page_layout: tag_page
 tag_page_dir: .
 tag_permalink_style: pretty
+
+authors:
+  kamal:
+    name:           Kamal Mustafa
+    bio_short:      Lead Engineer at Xoxzo Inc. Develop web applications in Python/Django. Interested in open source and tech talent development.
+    bio_full:       <a href="https://www.xoxzo.com/">Xoxzo.com</a> provide API services for developer to develop messaging and voice based application. The postings on this site are my own and don't necessarily represent my employer's positions, strategies or opinions. I can be reached via Twitter <a href="https://twitter.com/k4ml">@k4ml</a>.
+    gravatar:       dab3052b18c86b0884341d9c2c67a4f3
+    pic:            https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAX4AAAAJGM3ZjdkN2M3LTBkZmMtNDZlZi1hZGI4LTEzZTk4MTNiOTYyMQ.jpg

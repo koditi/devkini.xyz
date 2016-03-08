@@ -24,3 +24,124 @@ h1 {
   margin-bottom: 0px;
   line-height: normal;
 }
+
+/*
+ * Author
+ */
+
+.author {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: #717171;
+  background-color: #f0f0f0;
+}
+
+.author:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.author .gravatar {
+        float: left;
+}
+
+.author .detail {
+        margin-left: 90px;
+}
+
+.author .name {
+        font-weight: bold;
+}
+
+.author .bio {
+        line-height: 1rem;
+        font-size: 90%;
+}
+
+.pic {
+        float: left;
+        width: 120px;
+        padding-right: 0;
+        padding-top: 10px;
+}
+
+.pic img {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    width: 100px;
+    height: 100px;
+
+}
+
+.bio {
+  margin-left: 125px;
+        padding-left: 0;
+        text-align: justify;
+}
+
+
+/*
+ * TOC
+ */
+
+#toc_toggle {
+  float: right;
+  font-size: 90%;
+  font-style: italic;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+#toc {
+  display: none;
+  background: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.clickable-header {
+  cursor: pointer;
+}
+
+.clickable-header:hover {
+  text-decoration: underline;
+}
+
+.top-level-header {
+  display: inline;
+}
+
+.back-to-top {
+  margin: 12px 0;
+  cursor: pointer;
+  float: right;
+  color: #aaa;
+}
+
+.admonition-info {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 15px;
+}
+
+.admonition-info:before {
+    content: url(../images/icons/information.png);
+}
+
+.admonition-warning {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 15px;
+}
+
+.admonition-warning:before {
+    content: url(../images/icons/exclamation.png);
+}
