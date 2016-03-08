@@ -18,32 +18,33 @@ So, after trying so many ideas, it comes down to 'Radically change the process o
 At that time, the process was:
 
 1. Take html from mysql
-2. Process it to fit the format needed
-3. Save it as local temporary file
-4. Use custom AWS S3 library to beam up that file to s3
-5. Save the url returned to array
-6. Save the data to approriate table
+1. Process it to fit the format needed
+1. Save it as local temporary file
+1. Use custom AWS S3 library to beam up that file to s3
+1. Save the url returned to array
+1. Save the data to approriate table
 
 The new process to try was:
 
 1. Take html from mysql
-2. Process it to fit the format needed, return as string
-3. Take that html string and beam directly to s3 using latest AWS PHP SDK
-4. Save url and save data to table.
+1. Process it to fit the format needed, return as string
+1. Take that html string and beam directly to s3 using latest AWS PHP SDK
+1. Save url and save data to table.
 
 How much improvement? Old way: 240s, new way: 14s.
+
+<!--more-->
 
 How many headache:
 
 1. Latest AWS PHP SDK best to be used via Composer.
-2. Codeigniter 2 was not friendly to Composer. It was developed BEFORE Composer popularity. So, its understandable for it to be that way.
-3. Need to adjust the way to install and use AWS official SDK to CI 2. As it was not officially supported.
-4. Never done this before...
+1. Codeigniter 2 was not friendly to Composer. It was developed BEFORE Composer popularity. So, its understandable for it to be that way.
+1. Need to adjust the way to install and use AWS official SDK to CI 2. As it was not officially supported.
+1. Never done this before...
 
 So, the steps:
 
-Step 1: Composer Update
----
+### Step 1: Composer Update
 
 Well, somebody before me has tried to use composer before on this codebase, so there were already composer.json file.
 
@@ -76,6 +77,7 @@ Last for installation: we autoload it in CI index.php.
 Open index.php and paste this code ```require './vendor/autoload.php';``` near the bottom JUST ABOVE require core:
 
 ```php
+<?php
 //index.php
 
 /*
@@ -94,12 +96,12 @@ require_once BASEPATH.'core/CodeIgniter.php';
 
 Below than that, it will throw and error. I did not figure out why. Just move on:
 
-Step 2: Use s3Client in Controller
-----
+### Step 2: Use s3Client in Controller
 
 This is an example from [AWS PHP SDK documentation][2]:
 
 ```php
+<?
 use Aws\S3\S3Client;
 
 $bucket = '*** Your Bucket Name ***';
@@ -121,6 +123,7 @@ echo $result['ObjectURL'];
 The problem with this example was, it is given as a function, buat we need to use it in a Class (CI_Controller). The way to do that was, we put the ```use``` part on top of the class, outside of it. Refer example below:
 
 ```php
+<?php
 use Aws\S3\S3Client;
 use Aws\Common\Credentials\Credentials;
 
@@ -134,6 +137,7 @@ We only load classes that we want to use. Hence the verb ```use```.
 And then proceed to use the s3 methods in the function as shown below:
 
 ```php
+<?php
 
 // other method for this class up and below this code.
 
@@ -168,12 +172,12 @@ What we do here was we sending a html code (the 'Body' part there) and ask s3 SD
 
 Refer to [credentials docs][3] at AWS official docs for further info.
 
-Step 3: Done
-----
+### Step 3: Done
 
 Finish! This is the whole controller code:
 
 ```php
+<?php
 use Aws\S3\S3Client;
 use Aws\Common\Credentials\Credentials;
 
