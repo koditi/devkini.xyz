@@ -19,6 +19,10 @@ This is how the current setup:-
 
 The main difference between GitLab Pages and Github Pages is that the former use the integrated CI to build the page. This mean we're free to use whatever static site generator that we want instead of just limited to Jekyll on Github Pages. On top of that GitLab Pages also support HTTPS on custom domain ! You can see the new domain with ssl settings below:-
 
-<img src="http://i.imgur.com/4OChECc.png"></img>
+<img src="http://i.imgur.com/4OChECc.png">
 
 This of course require a browser/client with SNI support.
+
+This image showing the CI runner building the page:-
+
+<img src="http://i.imgur.com/nVRcoAc.png">
