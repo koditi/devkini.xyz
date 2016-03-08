@@ -214,3 +214,8 @@ class Pro extends CI_Controller {
 That was basicly the step to use it. Simple enough, but due to major lack of experience on composer and aws official SDK, it turns into 1 whole day job.
 
 Well, everything was like that for the first time i suppose.
+
+
+[1]: https://getcomposer.org/ 'Composer Main Page'
+[2]: http://docs.aws.amazon.com/AmazonS3/latest/dev/UploadObjSingleOpPHP.html 'AWS S3 Example'
+[3]: http://docs.aws.amazon.com/aws-sdk-php/v2/guide/credentials.html#factory-credentials 'AWS Credentials Docs'
