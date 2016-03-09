@@ -38,7 +38,7 @@ How much improvement? Old way: 240s, new way: 14s.
 How many headache:
 
 1. Latest AWS PHP SDK best to be used via Composer.
-1. Codeigniter 2 was not friendly to Composer. It was developed BEFORE Composer popularity. So, its understandable for it to be that way.
+1. Codeigniter 2 was not friendly to Composer. It was developed BEFORE Composer popularity. So, it is understandable for it to be that way.
 1. Need to adjust the way to install and use AWS official SDK to CI 2. As it was not officially supported.
 1. Never done this before...
 
@@ -64,7 +64,7 @@ Make sure you have installed Composer. If not, better go to [getcomposer.org][1]
 $ composer install
 ```
 
-For my case, i just need to update instead of install. And need to use sudo as i`ve installed composer as root user previously.
+For my case, I just need to update instead of install. And need to use sudo as I`ve installed composer as root user previously.
 
 ```
 $ sudo composer update
@@ -217,7 +217,7 @@ class Pro extends CI_Controller {
 
 That was basicly the step to use it. Simple enough, but due to major lack of experience on composer and aws official SDK, it turns into 1 whole day job.
 
-Well, everything was like that for the first time i suppose.
+Well, everything was like that for the first time I suppose.
 
 
 [1]: https://getcomposer.org/ 'Composer Main Page'
