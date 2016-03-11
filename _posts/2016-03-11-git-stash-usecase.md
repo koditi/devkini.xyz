@@ -6,7 +6,7 @@ tags:
     - git
 ---
 
-So someone asked in our group about `git stash`. Stash definitely is one of my favorite command in git. Like it so much that while I was still working with svn, I looked for an svn equivalent, [`svn stash`][svn-stash] !
+So someone asked in our Telegram group about `git stash`. Stash definitely is one of my favorite command in git. Like it so much that while I was still working with svn, I looked for an svn equivalent, [`svn stash`][svn-stash] !
 
 <img src="http://i.imgur.com/D9n8iip.png">
 
