@@ -59,7 +59,13 @@ Download Composer:-
     curl -sS https://getcomposer.org/installer | php
     php composer.phar install
     cp .env.example .env
+    php artisan serve
 
-    npm install -g gulp
+From here you can access http://localhost:8000/ and then fill in the setup page.
+
+## End Notes
+Running PHP on Alpine seem promising. This is just a starter so I'm not sure yet how it would end up. There are still a lot of thing to look into - setting up nginx, php-fpm etc. All needed packages so far can be installed via `apk`.
+
+Resource wise, it also promising. PHP dev server + mariadb totalled to 89MB RAM usage. My macbook air so far not screaming yet.
 
 [1]:https://blog.docker.com/2016/03/docker-for-mac-windows-beta/
