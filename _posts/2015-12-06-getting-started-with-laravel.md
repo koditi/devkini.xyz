@@ -2,6 +2,9 @@
 layout: post
 title: Getting Started With Laravel
 author: kamal
+tags:
+    - php
+    - laravel
 ---
 
 I'm using the [`laravel-base`][1] as starting point. For starter, the [`laravel-base`][1]'s `Readme.md` already covering it well.
