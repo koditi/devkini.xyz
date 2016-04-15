@@ -2,8 +2,17 @@
 layout: default
 ---
 
-<h1>{{ content }}</h1>
+{{ content }}
 
+{% assign author = site.authors[page.author] %}
+{% if author %}
+<div class="author">
+<div style="margin-bottom:10px; font-style:italic">About author</div>
+{% include author.html %}
+</div>
+{% endif %}
+
+<h1>Writing</h1>
 <ul>
 {% for p in site.posts do %}
   {% if p.author == page.author %}
