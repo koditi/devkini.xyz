@@ -11,6 +11,11 @@ I'm using the [`laravel-base`][1] as starting point. For starter, the [`laravel-
 
 <!--more-->
 
+# Contents
+{:.no_toc}
+* xxxx
+{:toc}
+
 ## Database Tables
 Since I want to store some data in the db, the first thing to do is to create the table's schema. You accomplish this using the `artisan` command:-
 

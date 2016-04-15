@@ -94,11 +94,12 @@ h1 {
   margin-right: 5px;
 }
 
-#toc {
-  display: none;
+#markdown-toc {
+  float: left !important;
   background: #f9f9f9;
   padding: 20px;
   margin-bottom: 20px;
+  margin-right: 5px;
 }
 
 .clickable-header {
