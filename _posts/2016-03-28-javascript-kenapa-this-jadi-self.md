@@ -4,6 +4,7 @@ title: "JavaScript: Kenapa this jadi self ?"
 author: kamal
 tags:
     - javascript
+    - malay
 ---
 
 Anda mungkin pernah terjumpa kod JavaScript yang mungkin kelihatan seperti berikut:-

@@ -5,6 +5,7 @@ author: kamal
 date: 2016-04-01
 tags:
     - php
+    - malay
 summary: >
             Penerangan ringkas tentang penggunaan Composer dalam aplikasi PHP.
 ---

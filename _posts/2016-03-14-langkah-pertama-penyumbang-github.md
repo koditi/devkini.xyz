@@ -7,6 +7,7 @@ tags:
     - git
     - github
     - open source
+    - malay
 summary: >
             Bagaimana untuk mula menjadi penyumbang di Github dengan menguji
             patch atau pull-request daripada developer lain.

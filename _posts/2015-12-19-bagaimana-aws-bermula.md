@@ -2,7 +2,9 @@
 layout: post
 title: Bagaimana AWS Bermula
 author: kamal
-tags: aws
+tags:
+    - aws
+    - malay
 ---
 
 AWS (Amazon Web Services) adalah antara perkhidmatan tunjang dalam infrastruktur Internet hari ini. Banyak laman-laman web utama seperti Dropbox, Instagram, Netflix, Reddit dan sebagainya, menggunakan infrastruktur daripada AWS. AWS bermula dengan menyediakan perkhidmatan *virtual server* yang dipanggil EC2 di mana penggunaan server fizikal dapat digantikan dengan hanya software yang lebih senang untuk dibina dan diselenggarakan.
