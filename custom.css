@@ -21,6 +21,7 @@
 
 /* to make tags look a bit nicer */
 h1 {
+  margin-top: 0px;
   margin-bottom: 0px;
   line-height: normal;
 }
@@ -145,4 +146,8 @@ h1 {
 
 .admonition-warning:before {
     content: url(../images/icons/exclamation.png);
+}
+
+.wrapper-masthead {
+  margin-bottom: 0px;
 }
