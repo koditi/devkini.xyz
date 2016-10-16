@@ -2,6 +2,7 @@
 layout: post
 title: Django From Scratch
 author: kamal
+featured: true
 tags:
     - python
     - django
