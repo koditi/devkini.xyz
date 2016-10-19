@@ -2,9 +2,8 @@ image: ruby:2.1
 
 pages:
   script:
-  - gem install jekyll-sitemap
-  - gem install jekyll
-  - gem install jekyll-tagging
+  - jekyll clean
+  - bundle
   - jekyll build -d public/
   artifacts:
     paths:
