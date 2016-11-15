@@ -19,8 +19,8 @@ layout: default
   {% endfor %}
 </div>
 
-<section id="content">
-  {% for post in site.posts limit:3 %}
+<div id="content">
+  {% for post in site.posts limit:4 %}
       {% if post.featured != true %}
     <article class="post">
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
@@ -34,10 +34,10 @@ layout: default
     </article>
     {% endif %}
   {% endfor %}
-</section>
+</div>
         
-        <section id="middle">
-  {% for post in site.posts limit:3 offset:3 %}
+        <div id="middle">
+  {% for post in site.posts limit:3 offset:4 %}
       {% if post.featured != true %}
     <article class="post">
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
