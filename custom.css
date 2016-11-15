@@ -255,11 +255,14 @@ MEDIA QUERIES
 }
 
 
-#content {
+.posts {
         background: #f8f8f8;
+        padding: 5px 15px;
+        margin-bottom: 3px;
 }
 #sidebar {
-        background: #f0efef;
+        background: #d9edf7;
+        border-color: #d9edf7;
 }
 header, #content, #middle, #sidebar {
         margin-bottom: 5px;
