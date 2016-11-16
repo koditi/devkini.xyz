@@ -271,3 +271,9 @@ header, #content, #middle, #sidebar {
 #pagewrap, #content, #middle, #sidebar {
         border: solid 1px #ccc;
 }
+
+.side-info {
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 4px;
+}
