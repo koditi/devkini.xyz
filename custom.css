@@ -154,30 +154,33 @@ h1 {
 
 /* STRUCTURE */
 
-#pagewrap {
+.container {
         padding: 5px;
-        width: 960px;
+        max-width: 960px;
         margin: 20px auto;
+}
+.container-post {
+        max-width: 740px;
 }
 header {
         height: 100px;
         padding: 0 15px;
 }
 #content {
-        width: 250px;
+        width: 320px;
         float: left;
         padding: 5px 15px;
 }
 
 #middle {
-        width: 250px; /* Account for margins + border values */
+        width: 320px; /* Account for margins + border values */
         float: left;
         padding: 5px 15px;
         margin: 0px 5px 5px 5px;
 }
 
 #sidebar {
-        width: 210px;
+        width: 300px;
         padding: 5px 15px;
         float: left;
 }
@@ -192,7 +195,7 @@ MEDIA QUERIES
 /* for 980px or less */
 @media screen and (max-width: 980px) {
         
-        #pagewrap {
+        .container {
                 width: 94%;
         }
         #content {
@@ -268,7 +271,7 @@ header, #content, #middle, #sidebar {
         margin-bottom: 5px;
 }
 
-#pagewrap, #content, #middle, #sidebar {
+#content, #middle, #sidebar {
         border: solid 1px #ccc;
 }
 
