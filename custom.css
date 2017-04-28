@@ -301,7 +301,6 @@ header, #content, #middle, #sidebar {
     text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
 #main-nav li a:hover {
-    background-color: #4CAF50;
+    background-color: #FF8C00;
 }
