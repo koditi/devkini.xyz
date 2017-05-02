@@ -13,6 +13,12 @@
     <meta name="author" content="{{ site.name }}" />
     <meta name="article:publisher" content="koditi" />
 
+    {% if page.featured_image %}
+    <meta property="og:image" content="{{ page.featured_image }}" />
+    {% else %}
+    <meta property="og:image" content="./images/koditi-banner.png" />
+    {% endif %}
+
     {% if page.title %}
     <meta property="og:title" content="{{ page.title }}" />
     <meta property="twitter:title" content="{{ page.title }}" />
