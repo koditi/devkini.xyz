@@ -16,7 +16,7 @@
     {% if page.featured_image %}
     <meta property="og:image" content="{{ page.featured_image }}" />
     {% else %}
-    <meta property="og:image" content="./images/koditi-banner.png" />
+    <meta property="og:image" content="{{ site.url }}images/koditi-banner.png" />
     {% endif %}
 
     {% if page.title %}
