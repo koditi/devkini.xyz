@@ -20,7 +20,7 @@ layout: default
 </div>
 
 <div id="content">
-  {% for post in site.posts limit:4 %}
+  {% for post in site.posts limit:5 %}
       {% if post.featured != true %}
     <article class="post">
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
@@ -37,7 +37,7 @@ layout: default
 </div>
         
         <div id="middle">
-  {% for post in site.posts limit:5 offset:4 %}
+  {% for post in site.posts limit:4 offset:5 %}
       {% if post.featured != true %}
     <article class="post">
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
