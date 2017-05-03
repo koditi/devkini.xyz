@@ -27,7 +27,7 @@ layout: default
         {% if post.featured != true %}
         <article class="post">
             <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-            <span class="tags">Tagged as: {{ post | tags }}</span><br/>
+            <div class="tags">Tagged as: {{ post | tags }}</div>
 
             <div class="entry">
                 {{ post.excerpt | truncate: 140 }}

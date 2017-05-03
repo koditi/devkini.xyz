@@ -43,8 +43,40 @@
         margin-top:-1em;
       }
 
+      .main-navbar {
+        background-color: #ffcd69;
+        font-color:#000;
+        font-size:1.5em;
+        font-weight:bold;
+      }
+
       .post > h1 > a {
         font-size:
+      }
+
+      .author-title {
+        font-size:1.5em;
+        margin-bottom:1em;
+        font-style:italic;
+      }
+      .author_pic {
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        width:100%;
+        height:100%;
+      }
+
+      .author-bio p {
+        font-size: 1.2em;
+      }
+
+      .author-bio p.author-long-bio {
+        font-style:italic;
+      }
+
+      .post-twitter {
+        background-color: #d9edf7;
       }
 
       .side-info {
@@ -52,16 +84,34 @@
         margin-bottom:0;
       }
 
+      .tag-title:before {
+        content:"#";
+      }
+      .tag-list li {
+        font-size:1.2em;
+      }
+
       .side-bar-right {
         padding-top:1em;
         padding-bottom:1em;
         background-color: #d9edf7;
       }
+
+      .read-more {
+          font-size:1.4em;
+      }
+
+      .tags {
+            font-style: oblique;
+            font-style: oblique;
+            margin-top: -0.5em;
+            margin-bottom: .5em;
+      }
     </style>
   </head>
 
   <body>
-  <div class="container {% unless page.url == '/' %}container-post{% endunless %}">
+  <div class="container col-md-8 col-md-push-2 {% unless page.url == '/' %}container-post{% endunless %}">
     <div class="header clearfix">
       <div class="pull-right">
         <div class="row">
@@ -85,9 +135,9 @@
       </div>
     </div>
 
-    <div>
-      <div id="main-nav">
-        <ul>
+    <nav class="navbar navbar-default main-navbar">
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
           <li><a href="{{ site.baseurl }}/">Home</a></li>
           <li><a href="{{ site.baseurl }}/php/">PHP</a></li>
           <li><a href="{{ site.baseurl }}/python/">Python</a></li>
@@ -97,15 +147,11 @@
           <li><a href="{{ site.baseurl }}/git/">GIT</a></li>
         </ul>
       </div>
-    </div>
+    </nav>
 
     <div class="row ">
-
         {{ content }}
-
     </div>
-
-
 
   </div>
   <footer class="footer">
@@ -113,9 +159,6 @@
       <p class="text-muted">{% include svg-icons.html %}</p>
     </div>
   </footer>
-
-
-
 
   {% include analytics.html %}
   {% include gitter-sidecar.html %}

@@ -1,12 +1,14 @@
-<div class="pic">
-                <a name="{{ key }}"></a>
-                <img  src="{{ author.pic }}" />
-        </div>
-        <div class="bio">
-                <p>
-                    {{ author.bio_short }}
-                <p>
-                <p style="font-style:italic">
-                    {{ author.bio_full }}
-                <p>
-        </div>
+<div class="row">
+    <div class="col-md-2 ">
+        <a name="{{ key }}"></a>
+        <img  src="{{ author.pic }}"  class="author_pic"/>
+    </div>
+    <div class="col-md-10 author-bio">
+        <p>
+            {{ author.bio_short }}
+        <p>
+        <p class="author-long-bio">
+            {{ author.bio_full }}
+        <p>
+    </div>
+</div>

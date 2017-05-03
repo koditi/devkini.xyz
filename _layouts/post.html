@@ -17,13 +17,13 @@ layout: default
 
   {% assign author = site.authors[page.author] %}
   {% if author %}
-  <div class="author">
-    <div style="margin-bottom:10px; font-style:italic">About author</div>
+  <div class="author well">
+    <div class="author-title">About author</div>
     {% include author.html %}
   </div>
   {% endif %}
   
-  <div class="panel">
+  <div class="panel well post-twitter">
     Ikuti perkembangan terkini melalui twitter kami <a href="https://twitter.com/koditi">@koditi</a>.
   </div>
   
