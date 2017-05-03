@@ -3,7 +3,6 @@ layout: post
 title: Langkah Pertama Menjadi Penyumbang di Github
 author: kamal
 level: 2
-featured: true
 tags:
     - git
     - github
