@@ -101,17 +101,26 @@
           font-size:1.4em;
       }
 
+      .post-meta-date {
+        margin-bottom:1em;
+        font-style: oblique;
+      }
+
       .tags {
-            font-style: oblique;
             font-style: oblique;
             margin-top: -0.5em;
             margin-bottom: .5em;
+      }
+
+      .post-tags {
+        margin-top:-.5em;
+        margin-bottom:1em;
       }
     </style>
   </head>
 
   <body>
-  <div class="container col-md-8 col-md-push-2 {% unless page.url == '/' %}container-post{% endunless %}">
+  <div class="container {% unless page.url == '/' %}container-post{% endunless %}">
     <div class="header clearfix">
       <div class="pull-right">
         <div class="row">
