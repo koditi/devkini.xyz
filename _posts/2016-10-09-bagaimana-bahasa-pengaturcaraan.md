@@ -11,7 +11,7 @@ Setelah terlibat dalam bidang pembangunan perisian komputer mungkin ini antara p
 
 Bagi yang pernah mengikuti kursus Sains Komputer di universiti mungkin sudah biasa dengan istilah seperti parser, compiler, interpreter dan sebagainya. Ia adalah antara ‘tools’ yang digunakan untuk membina sebuah bahasa pengaturcaraan.
 
-Hampir semua bahasa pengaturcaraan, terutamanya bahasa aras tinggi (high level language) dibina dalam step (fixme) yang sama. Bahasa aras tinggi ini seperti C, Java, Python, C#, PHP, Ruby, JavaScript dan banyak lagi mempunyai bentuk yang seakan-akan bahasa manusia iaitu English. Namun ini tidak bermakna bahasa pengaturcaraan hanya boleh ditulis seperti English, cuma mungkin majoriti bahasa pengaturcaraan ini bermula dari dunia orang-orang Inggeris.
+Hampir semua bahasa pengaturcaraan, terutamanya bahasa aras tinggi (high level language) dibina dalam step yang sama. Bahasa aras tinggi ini seperti C, Java, Python, C#, PHP, Ruby, JavaScript dan banyak lagi mempunyai bentuk yang seakan-akan bahasa manusia iaitu English. Namun ini tidak bermakna bahasa pengaturcaraan hanya boleh ditulis seperti English, cuma mungkin majoriti bahasa pengaturcaraan ini bermula dari dunia orang-orang Inggeris.
 
 **Jadi bagaimana bahasa pengaturcaraan ini dibina?**
 
