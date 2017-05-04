@@ -151,3 +151,132 @@ h1 {
 .wrapper-masthead {
   margin-bottom: 0px;
 }
+
+/* STRUCTURE */
+
+.container {
+        padding: 5px;
+        max-width: 960px;
+        margin: 20px auto;
+}
+.container-post {
+        max-width: 740px;
+}
+header {
+        height: 100px;
+        padding: 0 15px;
+}
+#content {
+        width: 320px;
+        float: left;
+        padding: 5px 15px;
+}
+
+#middle {
+        width: 320px; /* Account for margins + border values */
+        float: left;
+        padding: 5px 15px;
+        margin: 0px 5px 5px 5px;
+}
+
+#sidebar {
+        width: 300px;
+        padding: 5px 15px;
+        float: left;
+}
+footer {
+        clear: both;
+        padding: 0 15px;
+}
+
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+/* for 980px or less */
+@media screen and (max-width: 980px) {
+        
+        .container {
+                width: 94%;
+        }
+        #content {
+                width: 41%;
+                padding: 1% 4%;
+        }
+        #middle {
+                width: 41%;
+                padding: 1% 4%;
+                margin: 0px 0px 5px 5px;
+                float: right;
+        }
+        
+        #sidebar {
+                clear: both;
+                padding: 1% 4%;
+                width: auto;
+                float: none;
+        }
+
+        header, footer {
+                padding: 1% 4%;
+        }
+}
+
+/* for 700px or less */
+@media screen and (max-width: 600px) {
+
+        #content {
+                width: auto;
+                float: none;
+        }
+        
+        #middle {
+                width: auto;
+                float: none;
+                margin-left: 0px;
+        }
+        
+        #sidebar {
+                width: auto;
+                float: none;
+        }
+
+}
+
+/* for 480px or less */
+@media screen and (max-width: 480px) {
+
+        header {
+                height: auto;
+        }
+        h1 {
+                font-size: 2em;
+        }
+        #sidebar {
+                display: none;
+        }
+
+}
+
+
+.posts {
+        background: #f8f8f8;
+        padding: 5px 15px;
+        margin-bottom: 3px;
+}
+#sidebar {
+        background: #d9edf7;
+        border-color: #d9edf7;
+}
+header, #content, #middle, #sidebar {
+        margin-bottom: 5px;
+}
+
+#content, #middle, #sidebar {
+        border: solid 1px #ccc;
+}
+
+.side-info {
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 4px;
+}

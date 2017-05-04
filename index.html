@@ -4,8 +4,8 @@ layout: default
 
 <div class="posts">
   {% for post in site.posts %}
+      {% if post.featured == true %}
     <article class="post">
-
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
       <span class="tags">Tagged as: {{ post | tags }}</span><br />
 
@@ -15,5 +15,48 @@ layout: default
 
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
+    {% endif %}
   {% endfor %}
 </div>
+
+<div id="content">
+  {% for post in site.posts limit:5 %}
+      {% if post.featured != true %}
+    <article class="post">
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+      <span class="tags">Tagged as: {{ post | tags }}</span><br />
+
+      <div class="entry">
+        {{ post.excerpt | truncate: 140 }}
+      </div>
+
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+    </article>
+    {% endif %}
+  {% endfor %}
+</div>
+        
+        <div id="middle">
+  {% for post in site.posts limit:4 offset:5 %}
+      {% if post.featured != true %}
+    <article class="post">
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+      <span class="tags">Tagged as: {{ post | tags }}</span><br />
+
+      <div class="entry">
+        {{ post.excerpt | truncate: 140 }}
+      </div>
+
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+    </article>
+    {% endif %}
+  {% endfor %}
+        </div>
+
+        <div id="sidebar">
+            <div class="side-info">
+            Ikuti perkembangan terkini melalui twitter kami <a href="https://twitter.com/koditi">@koditi</a>.
+            </div>
+            <br />
+            <a class="twitter-timeline" data-tweet-limit="3" href="https://twitter.com/koditi">Tweets oleh koditi</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
