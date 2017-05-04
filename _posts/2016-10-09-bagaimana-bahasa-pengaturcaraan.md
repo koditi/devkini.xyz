@@ -61,13 +61,19 @@ sekarang anda nampak bagaimana prosesnya bukan … ?
 ### Parser generator
 Hari ini bagaimanapun kebanyakkan parser tidak lagi ditulis secara manual “from scratch”. Ada pelbagai jenis program untuk menjana parser bagi bahasa kita. Parser generator ini memerlukan kita define bahasa kita dalam bentuk skema tertentu (dipanggil grammar). Grammar yang biasa digunakan adalah BNF (Backus-Naur Form).
 
-Daripada spesifikasi BNF, kita boleh gunakan parser generator untuk generate parser bagi bahasa yang kita cuba bina. Untuk bahasa Python umpamanya, anda boleh lihat grammar’nya di https://docs.python.org/2/reference/grammar.html. Untuk PHP, anda boleh skema grammar ia - http://lxr.php.net/xref/PHP_TRUNK/Zend/zend_language_parser.y. Ia bukannya BNF tapi dalam format yang digunakan oleh YACC, parser generator yang digunakan oleh pembangun PHP.
+Daripada spesifikasi BNF, kita boleh gunakan parser generator untuk generate parser bagi bahasa yang kita cuba bina. Untuk bahasa Python umpamanya, anda boleh lihat grammar’nya di https://docs.python.org/2/reference/grammar.html. Untuk PHP, anda boleh lihat skema grammar ia - http://lxr.php.net/xref/PHP_TRUNK/Zend/zend_language_parser.y. Ia bukannya BNF tapi dalam format yang digunakan oleh YACC, parser generator yang digunakan oleh pembangun PHP.
 
 Jika anda sekadar ingin cuba-cuba tukar beberapa keyword dalam bahasa sedia ada, contohnya tukar ‘if’ dalam PHP kepada ‘jika’, anda boleh bermula dengan grammar file ini. Di samping itu, ada banyak senarai grammar yang anda boleh adaptasi sebagai asas kepada bahasa anda sendiri - http://www.antlr3.org/grammar/list.html
 
 ### AST
 
+Hasil daripada *parsing* adalah apa yang dipanggil Abstract Syntax Tree (AST). Token-token arahan sebelum ini kini wujud dalam bentuk data structure yang sedia untuk diproses. Daripada sini, kita boleh membuat keputusan sama ada hendak generate *compiler* atau pun *interpreter* kepada language tersebut. *compiler* akan menjana code contohnya seperti kod binari yang dapat dijalankan terus oleh komputer ataupun kepada *bytecode* yang akan dijalankan oleh vm. Manakala untuk *interpreter*, kita akan menjalankan terus arahan daripada code yang ditulis.
+
+Selain menjana kod binari, kita juga boleh menjana kod bahasa lain yang lain sedia ada, contohnya menjada kod JavaScript, yang mana kod tersebut dapat dijalankan dalam persekitaran yang menyokong JavaScript. Teknik ini dipanggil *transpiling*. Kelebihan teknik ini adalah kita tidak perlu risau bagaimana hendak menjalankan kod bahasa pengaturcaraan kita dan cuma bergantung kepada program yang sedia ada.
+
 ### Compiler/Interpreter
+
+### Rujukan
 
 http://compilers.iecc.com/crenshaw/tutor1.txt
 http://www.codeproject.com/Articles/50377/Create-Your-Own-Programming-Language
@@ -78,6 +84,6 @@ http://kore-nordmann.de/blog/do_NOT_parse_using_regexp.html
 http://www.playwithlua.com/?p=66
 http://ruslanspivak.com/lsbasi-part1/
 
+### Nota
 When writing a custom parser you can - and should - use regular expressions in the tokenizer. They do a great job here. To rephrase it:
 Use regular expressions to recognize words, not structures.
-
