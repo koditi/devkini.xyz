@@ -112,6 +112,12 @@
             margin-bottom: .5em;
       }
 
+      .menu-content-split {
+        height:0.5px;
+        margin-top:-.5em;
+        margin-bottom:1em;
+      }
+
       .post-tags {
         margin-top:-.5em;
         margin-bottom:1em;
@@ -144,25 +150,40 @@
       </div>
     </div>
 
-    <nav class="navbar navbar-default main-navbar">
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li><a href="{{ site.baseurl }}/">Home</a></li>
-          <li><a href="{{ site.baseurl }}/php/">PHP</a></li>
-          <li><a href="{{ site.baseurl }}/python/">Python</a></li>
-          <li><a href="{{ site.baseurl }}/javascript/">JavaScript</a></li>
-          <li><a href="{{ site.baseurl }}/html/">HTML</a></li>
-          <li><a href="{{ site.baseurl }}/css/">CSS</a></li>
-          <li><a href="{{ site.baseurl }}/git/">GIT</a></li>
-        </ul>
-      </div>
+    <nav class="navbar navbar-default main-navbar visible-md  visible-lg">
+      <ul class="nav navbar-nav">
+        <li><a href="{{ site.baseurl }}/">Home</a></li>
+        <li><a href="{{ site.baseurl }}/php/">PHP</a></li>
+        <li><a href="{{ site.baseurl }}/python/">Python</a></li>
+        <li><a href="{{ site.baseurl }}/javascript/">JavaScript</a></li>
+        <li><a href="{{ site.baseurl }}/html/">HTML</a></li>
+        <li><a href="{{ site.baseurl }}/css/">CSS</a></li>
+        <li><a href="{{ site.baseurl }}/git/">GIT</a></li>
+      </ul>
     </nav>
+
+    <hr class="menu-content-split">
 
     <div class="row ">
         {{ content }}
     </div>
 
   </div>
+
+  <hr class="menu-content-split">
+  
+  <nav class="navbar navbar-default main-navbar visible-xs visible-sm">
+    <ul class="nav navbar-nav">
+      <li><a href="{{ site.baseurl }}/">Home</a></li>
+      <li><a href="{{ site.baseurl }}/php/">PHP</a></li>
+      <li><a href="{{ site.baseurl }}/python/">Python</a></li>
+      <li><a href="{{ site.baseurl }}/javascript/">JavaScript</a></li>
+      <li><a href="{{ site.baseurl }}/html/">HTML</a></li>
+      <li><a href="{{ site.baseurl }}/css/">CSS</a></li>
+      <li><a href="{{ site.baseurl }}/git/">GIT</a></li>
+    </ul>
+  </nav>
+
   <footer class="footer">
     <div class="container" style="min-height:50px;">
       <p class="text-muted">{% include svg-icons.html %}</p>
