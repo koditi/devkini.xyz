@@ -4,26 +4,26 @@ layout: default
 
 <article class="post">
   <h1>{{ page.title }}</h1>
-  <span class="tags">Tagged as: {{ page | tags }}</span><br />
+  <div class="post-tags">Tagged as: {{ page | tags }}</div>
 
   <div class="entry">
     {{ content }}
   </div>
 
-  <div class="date">
+  <div class="date post-meta-date">
     Written on {{ page.date | date: "%B %e, %Y" }}
     {% if page.author %} by {{ page.author }} {% endif %}
   </div>
 
   {% assign author = site.authors[page.author] %}
   {% if author %}
-  <div class="author">
-    <div style="margin-bottom:10px; font-style:italic">About author</div>
+  <div class="author well">
+    <div class="author-title">About author</div>
     {% include author.html %}
   </div>
   {% endif %}
   
-  <div class="panel">
+  <div class="panel well post-twitter">
     Ikuti perkembangan terkini melalui twitter kami <a href="https://twitter.com/koditi">@koditi</a>.
   </div>
   
