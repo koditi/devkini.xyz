@@ -42,6 +42,8 @@ Jika diperhatikan pada proses mencari *libraries* di atas, kita akan dapati iany
 
 Masalah *A depend on B and B depend on C* ini merupakan satu masalah klasik dalam Sains Komputer dan pelbagai *algorithm* telah pun dibina untuk menyelesaikan masalah ini.
 
+![dependency-resolving-algorithm](http://i.imgur.com/8tz9TBH.png)*http://www.electricmonk.nl/log/2008/08/07/dependency-resolving-algorithm/*
+
 <img src="http://i.imgur.com/8tz9TBH.png" class="img-displayed"></img>
 <span class="img-caption">http://www.electricmonk.nl/log/2008/08/07/dependency-resolving-algorithm/</span>
 
