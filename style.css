@@ -8155,7 +8155,7 @@ button.close {
   font-weight: bold; }
 
 .author-title {
-  font-size: 1.5em;
+  font-size: 2em;
   margin-bottom: 1em;
   font-style: italic; }
 
@@ -8510,5 +8510,3 @@ code {
 /* Name.Variable.Instance */
 .highlight .il {
   color: #2AA198; }
-
-/*# sourceMappingURL=style.css.map */
