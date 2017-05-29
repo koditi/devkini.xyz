@@ -142,6 +142,36 @@ code {
   color: #586E75;
 }
 
+.left-block, .center-block, .side-bar-right {
+  border:solid 1px #ccc;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  line-height: .85em;
+}
+
+.center-block h1 > a, .left-block h1 > a, .side-bar-right h1 > a {
+  font-size: .85em;
+  color:#222;;
+  font-weight: 700;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-kerning: auto;
+  font-stretch: normal;
+  font-style: normal;
+  vertical-align: baseline;
+
+  padding-top: .5em;
+  padding-bottom: .6em;
+}
+
+.center-block, .left-block {
+  padding-bottom:2em;
+}
+
+
+
+
 /* Comment */
 .highlight .err {
   color: #93A1A1;
