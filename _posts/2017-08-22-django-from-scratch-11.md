@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Django From Scratch
+title: Django 1.11 From Scratch
 author: kamal
 tags:
     - python
@@ -21,19 +21,20 @@ There are a lot of tutorials out there on Django and the official documentation 
 So let's get started by downloading Django itself from the website.
 
 ```
-$ wget -O django.tar.gz https://www.djangoproject.com/download/1.8.3/tarball/
+$ wget -O django.tar.gz https://www.djangoproject.com/download/1.11.2/tarball/
 $ tar xzf django.tar.gz 
 $ ls
-Django-1.8.3  django.tar.gz
-$ ls Django-1.8.3/
-AUTHORS  docs    INSTALL  MANIFEST.in  README.rst  setup.cfg  tests
-django   extras  LICENSE  PKG-INFO     scripts     setup.py
+Django-1.11.2  django.tar.gz
+$ ls Django-1.11.2
+AUTHORS          Gruntfile.js     LICENSE.python   README.rst       js_tests         setup.cfg
+CONTRIBUTING.rst INSTALL          MANIFEST.in      docs             package.json     setup.py
+Django.egg-info  LICENSE          PKG-INFO         extras           scripts          tests
 ```
 
 What we're getting is called a Python package that supposed to be installed. But we're not going to install it, instead let just take what we really need. Take out the `django` directory and move to our current directory.
 
 ```
-$ mv Django-1.8.3/django .
+$ mv Django-1.11.2/django .
 ```
 
 One thing we should understand when get started with Django is that it's just Python. In Python the most important thing is to make sure we can import the module we want to use. Let's try to `import django`.
@@ -58,7 +59,17 @@ from django.core.management import execute_from_command_line
 execute_from_command_line()
 ```
 
-The filename can be anything but let's call it `main.py`. If you run that script with python, it will display a list of available sub-commands, along with some help message.
+The filename can be anything but let's call it `main.py`. If you run that script with python, it will display a list of available sub-commands, along with some help message. But when you run this command, you probably got an error like this:-
+
+```
+ImportError: No module named 'pytz'
+```
+
+Let's get pytz:-
+
+wget https://pypi.python.org/packages/aa/b1/6ce9665e4ecc240aff34a762c0d9ad5c4b028b0aa8f1f2e2625fca2d60ff/pytz-2017.2-py3.5.egg
+
+unzip pytz-2017.2-py3.5.egg
 
 ```
 python main.py
@@ -74,15 +85,30 @@ dbshell
 runserver
 ```
 
+You may get a warning message (in red) like this:-
+
+Note that only Django core commands are listed as settings are not properly configured (error: Requested setting INSTALLED_APPS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.).
+
 The sub-command we're interested with is the `runserver`. That will start a process that listen at port 8000 and ready to serve HTTP request. People call it web server, quite similar to that well known Apache. Of course this web server that come with Django is not meant to replace Apache and far from usable outside of this local machine but that will be in another post. Let's try to run the `runserver` command:-
 
 ```
-$ python main.py runserver
+$ python main.py
 ```
 
 You'll get a message like this:-
 
-    django.core.exceptions.ImproperlyConfigured: Requested setting DEFAULT_INDEX_TABLESPACE, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+```
+Traceback (most recent call last):
+  File "main.py", line 4, in <module>
+    django.setup()
+  File "/Users/kamal/python/dfs/django/__init__.py", line 22, in setup
+    configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+  File "/Users/kamal/python/dfs/django/conf/__init__.py", line 56, in __getattr__
+    self._setup(name)
+  File "/Users/kamal/python/dfs/django/conf/__init__.py", line 39, in _setup
+    % (desc, ENVIRONMENT_VARIABLE))
+django.core.exceptions.ImproperlyConfigured: Requested setting LOGGING_CONFIG, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+```
 
 So something not right, in order for Django to start up, you have to tell it how to configure itself. You have to provide some settings. The settings itself just another python module (there's another way to provide settings) which mean the module must be able to be imported from the python script that we use to run django. Let's create the settings module, name it `settings.py` (it can be anything):-
 
@@ -107,6 +133,48 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
 execute_from_command_line()
 ```
 
+Now when we run `python main.py`, we'll get the following:-
+
+```
+Type 'main.py help <subcommand>' for help on a specific subcommand.
+
+Available subcommands:
+
+[django]
+    check
+    compilemessages
+    createcachetable
+    dbshell
+    diffsettings
+    dumpdata
+    flush
+    inspectdb
+    loaddata
+    makemessages
+    makemigrations
+    migrate
+    runserver
+    sendtestemail
+    shell
+    showmigrations
+    sqlflush
+    sqlmigrate
+    sqlsequencereset
+    squashmigrations
+    startapp
+    startproject
+    test
+    testserver
+Note that only Django core commands are listed as settings are not properly configured (error: The SECRET_KEY setting must not be empty.).
+```
+Remember, our `settings.py` still empty and above, Django is expecting a settings named `SECRET_KEY`. Django already come with list of [default settings][1] but apparently for this one, you have to specify it yourself. Let's ignore first what the purpose of this `SECRET_KEY`. So fix our settings module to have that:-
+
+```
+$ cat settings.py
+SECRET_KEY = "1+)O49,>}5!$+ 43*PN+2+=(2S'W*0^1_|76n{_"
+```
+
+
 Above, we hardcode the value of `DJANGO_SETTINGS_MODULE` environment variables to our settings module. Just like any environment variables, we can also specify it when we run our script:-
 
 ```
@@ -117,17 +185,7 @@ The result would be the same. Specifying the environment variables value on the 
 
 ```
 $ python main.py runserver
-ImproperlyConfigured: The SECRET_KEY setting must not be empty.
 ```
-
-Django already come with list of [default settings][1] but apparently for this one, you have to specify it yourself. Let's ignore first what the purpose of this `SECRET_KEY`. So fix our settings module to have that:-
-
-```
-$ cat settings.py
-SECRET_KEY = "1+)O49,>}5!$+ 43*PN+2+=(2S'W*0^1_|76n{_"
-```
-
-Run `runserver` again:-
 
 You'll get this error:-
 
@@ -159,10 +217,15 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
 
-Now django happily start the server. Let's try to access it:-
+Now django happily start the server. Let's try to access it. Run this on a separate console:-
 
 ```
 $ curl http://localhost:8000/
+A server error occurred.  Please contact the administrator.
+```
+You can also try to access the url using browser, the result would be similar. Let's check the console where we run `runserver`:-
+
+```
 Traceback (most recent call last):
   File "/usr/lib/python2.6/wsgiref/handlers.py", line 93, in run
     self.result = application(self.environ, self.start_response)
@@ -181,17 +244,17 @@ The reason django gave you an error because you haven't tell yet django what to 
 ```
 $ cat urls.py
 from django.http import HttpResponse
-from django.conf.urls import patterns, url
+from django.conf.urls import url
 
 def hello_world(request):
     return HttpResponse('Hello world')
 
-urlpatterns = patterns('',
+urlpatterns = [
     url(r'^$', hello_world),
-)
+]
 ```
 
-The module must have a name called `urlpatterns` that having a reference to the return value of function `django.conf.urls.patterns`. You call the function by passing 2 or more parameters, the first parameter can just be an empty string (explanation should be in another post), the rest of the parameters should be a tuple of 2 items - (pattern, function). It's recommended however to wrap the tuple through django provided function `url()` as it will provide you with more features that you will need as your application grow. The function can be a direct reference to function object (like above) or just a string of valid import path to the function. In the later case, django will try to import the function and then call it.
+The module must have a name called `urlpatterns` that having a list of call to function named `url`. 
 
 Once above is done, you can hook it into `settings.py` which now should look like:-
 
@@ -235,11 +298,7 @@ $ ls myapp
 settings.py  urls.py
 ```
 
-`main.py` should remain outside as it is the entry point to our app and it will be much easier if it is not in the containing app. This way we can phrase it as `main.py` will call `myapp`, otherwise if we put `main.py` in `myapp`, then `myapp` has to call itself. While technically possible it will be much harder to explain. Django has done this in the beginning and has since corrected it in last few latest versions. In order for a directory to be recognised as valid python package (namespace), you have to provide a file named `__init__.py`. Most of the time it can be empty.
-
-```
-$ touch myapp/__init__.py
-```
+`main.py` should remain outside as it is the entry point to our app and it will be much easier if it is not in the containing app. This way we can phrase it as `main.py` will call `myapp`, otherwise if we put `main.py` in `myapp`, then `myapp` has to call itself. While technically possible it will be much harder to explain. Django has done this in the beginning and has since corrected it in last few latest versions. If you're using python 2, In order for a directory to be recognised as valid python package (namespace), you have to provide a file named `__init__.py`. Most of the time it can be empty.
 
 Now we have to fix our settings a bit to reflect the new location of our modules. It should look like this:-
 
@@ -277,7 +336,7 @@ def hello_world(request):
 Inside `urls.py` we import the views module and hook it into our url pattern:-
 
 ```
-from django.conf.urls import patterns, url
+from django.conf.urls import url
 
 from myapp.views import hello_world
 
@@ -293,7 +352,7 @@ Now come the hardest part to explain because of some 'hardcoding' django did to 
 $ cat myapp/models.py
 from django.db import models
 
-class Customer(models.Models):
+class Customer(models.Model):
     name = models.CharField(max_length=255)
 ```
 
@@ -329,12 +388,45 @@ DATABASES = {
 Once we configured `settings.INSTALLED_APPS` to have our app defined, we can run `syncdb` to let django create necessary database tables to store our models data:-
 
 ```
-$ python main.py syncdb
-Creating tables ...
-Creating table myapp_customer
-Installing custom SQL ...
-Installing indexes ...
-Installed 0 object(s) from 0 fixture(s)
+$ python main.py makemigrations myapp
+Migrations for 'myapp':
+  myapp/migrations/0001_initial.py
+    - Create model Customer
+```
+
+```
+$ cat myapp/migrations/0001_initial.py
+# -*- coding: utf-8 -*-
+# Generated by Django 1.11.2 on 2017-08-21 20:07
+from __future__ import unicode_literals
+
+from django.db import migrations, models
+
+
+class Migration(migrations.Migration):
+
+    initial = True
+
+    dependencies = [
+    ]
+
+    operations = [
+        migrations.CreateModel(
+            name='Customer',
+            fields=[
+                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('name', models.CharField(max_length=255)),
+            ],
+        ),
+    ]
+```
+
+```
+$ python main.py migrate
+Operations to perform:
+  Apply all migrations: myapp
+Running migrations:
+  Applying myapp.0001_initial... OK
 ```
 
 [1]:https://docs.djangoproject.com/en/1.5/ref/settings/
