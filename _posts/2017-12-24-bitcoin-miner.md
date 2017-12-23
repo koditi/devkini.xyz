@@ -47,6 +47,7 @@ while True:
         print(nonce)
         print(bin(nonce))
         break
+    nonce += 1
 ```
 Dalam contoh di atas, target yang pertama diambil daripada hash block [#500735](https://blockchain.info/block/00000000000000000051f3a7fabf5c19485fc30491f856d053a43cfafba7667d). Ia hampir mustahil untuk mendapatkan hash yang kurang daripada nombor tersebut menggunakan program python di atas dan menjalankannya hanya di atas laptop. Walaupun target dinaikkan sedikit, dengan menukar nombor pertama kepada 0, ia masih mustahil. Malah dengan nombor yang amat besar seperti target ketiga ia masih sukar.
 
