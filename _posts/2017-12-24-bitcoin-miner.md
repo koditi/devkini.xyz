@@ -15,7 +15,7 @@ Syarat-syarat inilah yang perlu dilakukan oleh bitcoin miner. Ideanya adalah, ji
 
 Konsep lakukan sesuatu untuk diterima ini dinamakan 'proof of work' (POW). POW memerlukan penggunaan kuasa perkomputeran yang tinggi yang secara langsung memerlukan sumber kuasa elektrik dan seperti yang kita sedia maklum, pastinya memerlukan modal yang banyak. Tapi apa sebenarnya POW yang perlu dilakukan oleh bitcoin miner ? Selalu kita dengar mereka perlu menyelesaikan permasalah matematik yang sukar. Tapi apakah permasalah matematik tersebut ?
 
-Sebenarnya tiada permasalahan matematik yang jitu perlu diselesaikan. Formulanya telah siap ada sejak berkurun lamanya. Apa yang perlu dilakukan hanyalah menukar beberapa pembolehubah dengan harapan mendapat jawapan yang memenuhi syarat-syarat yang ditetapkan oleh rangkaian. Setiap transaksi yang hendak dimasukkan ke dalam blockchain, perlu mempunyai pengenalan atau ID. ID ini boleh diperolehi dengan menjalankan operasi 'hashing' ke atas transaksi tersebut. Ini adalah operasi biasa dan setiap pengaturcara pasti pernah menggunakannya untuk tujuan tertentu. Contoh hashing jika menggunakan Python adalah:-
+Sebenarnya tiada permasalahan matematik yang jitu perlu diselesaikan. Formulanya telah siap ada [sejak berkurun lamanya][hashcash]. Apa yang perlu dilakukan hanyalah menukar beberapa pembolehubah dengan harapan mendapat jawapan yang memenuhi syarat-syarat yang ditetapkan oleh rangkaian. Setiap transaksi yang hendak dimasukkan ke dalam blockchain, perlu mempunyai pengenalan atau ID. ID ini boleh diperolehi dengan menjalankan operasi 'hashing' ke atas transaksi tersebut. Ini adalah operasi biasa dan setiap pengaturcara pasti pernah menggunakannya untuk tujuan tertentu. Contoh hashing jika menggunakan Python adalah:-
 
 ```
 import hashlib
@@ -52,3 +52,5 @@ while True:
 Dalam contoh di atas, target yang pertama diambil daripada hash block [#500735](https://blockchain.info/block/00000000000000000051f3a7fabf5c19485fc30491f856d053a43cfafba7667d). Ia hampir mustahil untuk mendapatkan hash yang kurang daripada nombor tersebut menggunakan program python di atas dan menjalankannya hanya di atas laptop. Walaupun target dinaikkan sedikit, dengan menukar nombor pertama kepada 0, ia masih mustahil. Malah dengan nombor yang amat besar seperti target ketiga ia masih sukar.
 
 Walaupun sukar, apa yang kita dapat lihat di sini miner bukanlah menyelesaikan satu permasalahan matematik. Mereka hanya mencari satu nombor dengan kaedah cuba-jaya yang berulang kali, dengan setiap kali percubaan, mereka akan menukar beberapa pembolehubah yang dibenarkan seperti nonce atau menyusun kembali transaksi-transaksi yang hendak disahkan supaya boleh mendapat nombor hash berlainan. Miner yang pertama dapat meneka nombor yang menepati syarat akan diisytiharkan pemenang dan block yang merekah sahkan akan dimasukkan ke dalam blockchain.
+
+[hashcash]:https://en.wikipedia.org/wiki/Hashcash
