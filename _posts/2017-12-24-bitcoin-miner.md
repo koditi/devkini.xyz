@@ -49,7 +49,7 @@ while True:
         break
     nonce += 1
 ```
-Dalam contoh di atas, target yang pertama diambil daripada hash block [#500735](https://blockchain.info/block/00000000000000000051f3a7fabf5c19485fc30491f856d053a43cfafba7667d). Ia hampir mustahil untuk mendapatkan hash yang kurang daripada nombor tersebut menggunakan program python di atas dan menjalankannya hanya di atas laptop. Walaupun target dinaikkan sedikit, dengan menukar nombor pertama kepada 0, ia masih mustahil. Malah dengan nombor yang amat besar seperti target ketiga ia masih sukar.
+Dalam contoh di atas, target yang pertama diambil daripada hash block [#500735](https://blockchain.info/block/00000000000000000051f3a7fabf5c19485fc30491f856d053a43cfafba7667d). Ia hampir mustahil untuk mendapatkan hash yang kurang daripada nombor tersebut menggunakan program python di atas dan menjalankannya hanya di atas laptop. Walaupun target dinaikkan sedikit, dengan menukar hanya nombor pertama kepada 0, ia masih mengambil masa. Malah dengan nombor yang amat besar seperti target ketiga ia masih sukar.
 
 Walaupun sukar, apa yang kita dapat lihat di sini miner bukanlah menyelesaikan satu permasalahan matematik. Mereka hanya mencari satu nombor dengan kaedah cuba-jaya yang berulang kali, dengan setiap kali percubaan, mereka akan menukar beberapa pembolehubah yang dibenarkan seperti nonce atau menyusun kembali transaksi-transaksi yang hendak disahkan supaya boleh mendapat nombor hash berlainan. Miner yang pertama dapat meneka nombor yang menepati syarat akan diisytiharkan pemenang dan block yang merekah sahkan akan dimasukkan ke dalam blockchain.
 
