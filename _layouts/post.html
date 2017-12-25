@@ -11,6 +11,10 @@ layout: default
         <div class="author-title text-center">About author</div>
         {% include author.html %}
       </div>
+      {% else %}
+      <div class="author well">
+        {% include default_author.html %}
+      </div>
       {% endif %}
     </div>
     <div class="col-md-8">
