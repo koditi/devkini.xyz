@@ -42,8 +42,9 @@ Jika diperhatikan pada proses mencari *libraries* di atas, kita akan dapati iany
 
 Masalah *A depend on B and B depend on C* ini merupakan satu masalah klasik dalam Sains Komputer dan pelbagai *algorithm* telah pun dibina untuk menyelesaikan masalah ini.
 
-<img src="http://i.imgur.com/8tz9TBH.png" class="img-displayed"></img>
-<span class="img-caption">http://www.electricmonk.nl/log/2008/08/07/dependency-resolving-algorithm/</span>
+{:.image-caption}
+![](http://i.imgur.com/8tz9TBH.png#center "Algoritma penyelesaian masalah di atas")*Rajah [Dependency Resolving Algorithm](http://www.electricmonk.nl/log/2008/08/07/dependency-resolving-algorithm/)*
+
 
 Berasaskan *algorithm* ini, setiap bahasa pengaturcaraan mempunyai *tools* tersendiri untuk menguruskan *libraries
 dependencies* ini. Berikut disenaraikan beberapa *tools* berkenaan:-
