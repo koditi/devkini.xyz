@@ -7,7 +7,7 @@ tags:
     - lua
     - language
 summary: >
-            Sejara Lua, bahasa pengaturcaraan dari Brazil yang terhasil daripada polisi
+            Sejarah Lua, bahasa pengaturcaraan dari Brazil yang terhasil daripada polisi
             perlindungan ekonomi kerajaan.
 ---
 
